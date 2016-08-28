@@ -1,15 +1,14 @@
-#schema
+#Schema
 
-## table backers
- data type |  column    |  note
------------|------------|--------------------
-  integer  |user_id,    |null: false, indexed
-  integer  |reward_id,  |null: false, indexed
-  datetime |created_at, |null: false
-  datetime |updated_at, |null: false
+## Table Users
+data type  | column          |note
+-----------|-----------------|---------------
+  string   |name,            |null: false, indexed
+  string   |password_digest, |null: false
+  string   |photo_url
+  text     |bio
 
-
-## table projects
+## Table Projects
  data type |  column     | note
 -----------|-------------|-------------------
   string   |title,       |null: false
@@ -23,7 +22,7 @@
   datetime |updated_at,  |null: false
 
 
-## table rewards
+## Table Rewards
  data type |  column     | note
 -----------|-------------|-------------------
   string   |title,       |null: false
@@ -32,12 +31,10 @@
   integer  |project_id,  |null: false, indexed
   integer  |limit
 
-
-
-## table users
-data type  | column          |note
------------|-----------------|---------------
-  string   |name,            |null: false, indexed
-  string   |password_digest, |null: false
-  string   |photo_url
-  text     |bio
+## Table Backers
+ data type |  column    |  note
+-----------|------------|--------------------
+  integer  |user_id,    |null: false, indexed
+  integer  |reward_id,  |null: false, indexed
+  datetime |created_at, |null: false
+  datetime |updated_at, |null: false
