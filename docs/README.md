@@ -24,11 +24,11 @@ This site will be functional with the following features, bug-free navigation, a
 * [Redux Structure][Redux]
 * [Sample State][State]
 
-[wireframes]: docs/wireframes
-[component]: docs/component-heirarchy.md
-[API]: docs/api-endpoints.md
-[DB]: docs/schema.md
-[Redux]: docs/redux-structure.md
-[State]: docs/sample-state.md
+[wireframes]: wireframes
+[component]: component-heirarchy.md
+[API]: api-endpoints.md
+[DB]: schema.md
+[Redux]: redux-structure.md
+[State]: sample-state.md
 
 ## Implementation Timeline
