@@ -30,4 +30,4 @@
  - `DELETE /api/rewards/:id`
 
  ### Backers
- - `POST /api/projects/:project_id/:Reward_id`
+ - `POST /api/projects/:currentUser_id/:Reward_id`
