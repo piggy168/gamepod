@@ -32,3 +32,73 @@ This site will be functional with the following features, bug-free navigation, a
 [State]: sample-state.md
 
 ## Implementation Timeline
+
+### Phase 1: Backend setup and Front End User Authentication (2 days)
+
+**Objective:** Functioning rails project with front-end Authentication
+
+- [ ] New Rails project
+- [ ] `User` model/migration
+- [ ] Back end authentication (session/password)
+- [ ] `StaticPages` controller and root view
+- [ ] Webpack & react/redux modules
+- [ ] `APIUtil` to interact with the API
+- [ ] Redux cycle for frontend authentication
+- [ ] User signup/signin components
+- [ ] Blank landing component
+- [ ] Style signup/signin components
+- [ ] Seed users
+- [ ] Review phase 1
+
+### Phase 2: Notes Model, API, and components (3 days)
+
+**Objective:** Projects can be created, read, edited and destroyed through
+the API.
+
+- [ ] `Projects` model
+- [ ] Seed database with a small amount of test data
+- [ ] CRUD API for Projects (`ProjectsController`)
+- [ ] JBuilder views for projects
+- Projects components and respective Redux loops
+  - [ ] `ProjectsIndex`
+  - [ ] `ProjectsForm`
+- [ ] Style Projects components
+- [ ] Seed Projects
+
+### Phase 3: Rewards (2 days)
+
+**Objective:** Rewards belong to Projects that can be created, read, edited and destroyed through the API.
+
+- [ ] `Rewards` model
+- [ ] Seed database with a small amount of test data
+- [ ] CRUD API for notes (`RewardsController`)
+- [ ] JBuilder views for notebooks
+- [ ] Adding rewards requires a project
+- [ ] Viewing rewards by project
+- [ ] Style project components
+- [ ] Review projects and rewards
+
+### Phase 4: Backers (1 day)
+
+**Objective:** Users can be back multiple rewards
+
+- [ ] `backer` model and `backer` join table
+- [ ] Adding backers to projects
+- [ ] Style backer components
+- [ ] Seed backers with seed data
+- [ ] Review backer flow
+
+### Phase 5: Searches (1 day)
+- [ ] search function
+- [ ] search views
+
+### Phase 6: Testing, Debugging, Polishing (1 days)
+- [ ] Testing and Debugging
+- [ ] Complete Seed data
+- [ ] Overall site styling
+
+### Bonus Features (TBD)
+- [ ] Server auto update project status daily
+- [ ] Allow User to add picture and styling in project detail
+- [ ] Add user profile page
+- [ ] Add payment system
