@@ -24,7 +24,7 @@
 
 **SearchResultsContainer**
  - Search
- - NoteIndex
+ - ProjectIndex
 
 **UserContainer**
  - UserInfo
@@ -59,5 +59,5 @@
 | "/projects/:projectId" | "ProjectContainer" |
 | "/projects/:category" | "CategoryContainer"|
 | "/home/search-results" | "SearchResultsContainer"
-| "/new-project" | "NewNoteContainer" |
+| "/new-project" | "NewProjectContainer" |
 | "/search" | "ProjectSearch" |

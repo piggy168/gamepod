@@ -9,6 +9,7 @@ This site will be functional with the following features, bug-free navigation, a
 - [ ] Hosting on Heroku
 - [ ] Browsing the project on the sites
 - [ ] User sign up/ log in (for starting a project and backing projects)
+- [ ] User backing a project
 - [ ] Search projects
 - [ ] Categories / Discover
 - [ ] Production README
@@ -50,7 +51,7 @@ This site will be functional with the following features, bug-free navigation, a
 - [ ] Seed users
 - [ ] Review phase 1
 
-### Phase 2: Notes Model, API, and components (3 days)
+### Phase 2: Projects Model, API, and components (3 days)
 
 **Objective:** Projects can be created, read, edited and destroyed through
 the API.
@@ -70,8 +71,8 @@ the API.
 
 - [ ] `Rewards` model
 - [ ] Seed database with a small amount of test data
-- [ ] CRUD API for notes (`RewardsController`)
-- [ ] JBuilder views for notebooks
+- [ ] CRUD API for rewards (`RewardsController`)
+- [ ] JBuilder views for projects
 - [ ] Adding rewards requires a project
 - [ ] Viewing rewards by project
 - [ ] Style project components
