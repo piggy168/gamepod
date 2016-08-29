@@ -17,6 +17,7 @@ data type  | column          |note
   integer  |creater_id  |null: false indexed
   date     |end_date    |null: false
   integer  |goal        |null: false
+  integer  |funded      |null: false
   string   |category    |null: false
   datetime |created_at  |null: false
   datetime |updated_at  |null: false
