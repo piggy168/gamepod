@@ -59,9 +59,8 @@ the API.
 - [ ] Seed database with a small amount of test data
 - [ ] CRUD API for Projects (`ProjectsController`)
 - [ ] JBuilder views for projects
-- Projects components and respective Redux loops
-  - [ ] `ProjectsIndex`
-  - [ ] `ProjectsForm`
+- [ ] `ProjectsIndex`
+- [ ] `ProjectsForm`
 - [ ] Style Projects components
 - [ ] Seed Projects
 
