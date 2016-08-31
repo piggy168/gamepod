@@ -3,6 +3,7 @@ import merge from 'lodash/merge';
 
 const _nullUser = Object.freeze({
   currentUser: null,
+  openmodal: false,
   errors: []
 });
 

@@ -6,7 +6,6 @@ class ProjectIndex extends React.Component{
   }
   componentDidMount(){
     this.props.requestProjects();
-    debugger
 
   }
 
