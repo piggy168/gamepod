@@ -10,8 +10,6 @@ const AppRouter = () => (
   <Router history={ hashHistory }>
     <Route path="/" component={ App }>
       <IndexRoute component= { ProjectIndexContainer }/>
-      <Route path='/login' component={ SessionFormContainer }/>
-      <Route path='/signup' component={ SessionFormContainer }/>
     </Route>
   </Router>
 );

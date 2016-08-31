@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
+import Modal from 'react-modal';
 
 class SessionForm extends React.Component {
 	constructor(props){
@@ -28,14 +29,10 @@ class SessionForm extends React.Component {
 	handleSubmit(e){
 		e.preventDefault();
 		const user = this.state;
-		this.props.processForm({user});
-	}
-
-	navLink(){
-		if (this.props.formType === "login") {
-			return <Link to="/signup">sign up instead</Link>;
+		if (this.props.formType === "login"){
+		this.props.login({user});
 		} else {
-			return <Link to="/login">log in instead</Link>;
+			this.props.signup({user});
 		}
 	}
 
@@ -53,12 +50,12 @@ class SessionForm extends React.Component {
 
 	render() {
 		return (
+
 			<div className="login-form-container">
 				<form onSubmit={this.handleSubmit} className="login-form-box">
-					Welcome to Game Pod!
+					{(this.props.formType === "login") ? "Log In" : "Sign Up"}
 					<br/>
-					Please { this.props.formType } or { this.navLink() }
-					{ this.renderErrors() }
+
 					<div className="login-form">
 						<br />
 						<label> Username:
@@ -77,10 +74,11 @@ class SessionForm extends React.Component {
 						</label>
 
 						<br />
-						<input type="submit" value="Submit" />
+						<input type="submit" value="Submit"/>
 					</div>
 				</form>
 			</div>
+
 		);
 	}
 
