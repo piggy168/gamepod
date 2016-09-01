@@ -15,7 +15,7 @@ class ProjectIndex extends React.Component{
 
     return(
       <div>
-        <h1>Hello index</h1>
+        <h1>Projects</h1>
           <ul className='projects'>
             {projects.map((project=><li>{project.title}</li>))}
           </ul>
