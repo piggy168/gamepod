@@ -14,20 +14,19 @@ class Greeting extends React.Component{
       style:  {
         overlay : {
             position        : 'fixed',
-            top             : 0,
+            top             : 50,
             left            : 0,
             right           : 0,
             bottom          : 0,
-            backgroundColor : 'rgba(255, 255, 255, 0.75)',
+            backgroundColor : 'rgba(0, 0, 0, 0.4)',
           },
         content : {
-            position        : 'fixed',
-            top             : '100px',
-            left            : '150px',
-            right           : '150px',
-            bottom          : '100px',
-            border          : '1px solid #ccc',
+            margin          : 'auto',
+            width           : '250px',
+            height          : '270px',
             padding         : '20px',
+            border          : 'none',
+            backgroundColor : 'rgba(0, 0, 0, 0.7)',
           }
         }
       };
@@ -53,10 +52,9 @@ class Greeting extends React.Component{
 
   sessionLinks(){ return(
     <nav className="login-signup">
-      <button id="signun" onClick={this.openSignupModal.bind(this)}> Sign up</button>
-      <button id="login" onClick={this.openLoginModal.bind(this)}> Login</button>
+      <button className="login" onClick={this.openLoginModal.bind(this)}> Login</button>
+      <button className="signup" onClick={this.openSignupModal.bind(this)}> Sign up</button>
         <Modal isOpen={this.state.modal} onRequestClose={this.closeModal.bind(this)} style={this.state.style}>
-          <button onClick={this.closeModal.bind(this)}>Close</button>
            <SessionFormContainer formType={this.state.form} />
         </Modal>
     </nav>

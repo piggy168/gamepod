@@ -18,59 +18,162 @@
     License: none (public domain)
  */
 
- html, body, div, span, applet, object, iframe,
- h1, h2, h3, h4, h5, h6, p, blockquote, pre,
- a, abbr, acronym, address, big, cite, code,
- del, dfn, em, img, ins, kbd, q, s, samp,
- small, strike, strong, sub, sup, tt, var,
- b, u, i, center,
- dl, dt, dd, ol, ul, li,
- fieldset, form, label, legend,
- table, caption, tbody, tfoot, thead, tr, th, td,
- article, aside, canvas, details, embed,
- figure, figcaption, footer, header, hgroup,
- menu, nav, output, ruby, section, summary,
- time, mark, audio, video {
- 	margin: 0;
- 	padding: 0;
- 	border: 0;
- 	font-size: 100%;
- 	font: inherit;
- 	vertical-align: baseline;
+ html, body, header, nav, h1, a,
+ ul, li, strong, main, button, i,
+ section, img, div, h2, p, form,
+ fieldset, label, input, textarea,
+ span, article, footer, time, small {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   outline: 0;
+   font: inherit;
+   color: inherit;
+   text-align: inherit;
+   text-decoration: inherit;
+   vertical-align: inherit;
+   box-sizing: inherit;
+   background: transparent;
  }
- /* HTML5 display-role reset for older browsers */
- article, aside, details, figcaption, figure,
- footer, header, hgroup, menu, nav, section {
- 	display: block;
+
+ ul {
+   list-style: none;
  }
+
+ img {
+   display: block;
+   width: 100%;
+   height: auto;
+ }
+
+ input[type="password"],
+ input[type="email"],
+ input[type="text"],
+ input[type="submit"],
+ textarea,
+ button {
+   /*
+   Get rid of native styling. Read more here:
+   http://css-tricks.com/almanac/properties/a/appearance/
+   */
+   -webkit-appearance: none;
+   -moz-appearance: none;
+ }
+
+ button,
+ input[type="submit"] {
+   cursor: pointer;
+ }
+
+ /* Clearfix */
+
+ .group:after {
+   content: "";
+   display: block;
+   clear: both;
+ }
+
  body {
- 	line-height: 1;
+   font-family: Sans-Serif;
+   line-height: 1;
+   background-image: url("http://res.cloudinary.com/dlszpthqv/image/upload/v1472685928/bg_ycfh0z.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
  }
- ol, ul {
- 	list-style: none;
- }
- blockquote, q {
- 	quotes: none;
- }
- blockquote:before, blockquote:after,
- q:before, q:after {
- 	content: '';
- 	content: none;
- }
- table {
- 	border-collapse: collapse;
- 	border-spacing: 0;
- }
-
  header {
-   display: flex;
-   justify-content: flex-end;
+
+   height: 50px;
  }
- h1 {
+
+
+
+ .header-link {
+   font-family: Sans-Serif;
    font-size: 32px;
-   align-self: flex-start;
+   display:inline;
+   float:left;
+   margin: 10px 10px;
  }
- login-signup {
-   flex-direction: row;
+
+ .login-signup {
+   font-family: Sans-Serif;
+   float:right;
+   display:inline;
+ }
+
+ .signup {
+   border-radius: 5px;
+   background-color: #7FC400;
+    color: #fff!important;
+    box-sizing: border-box;
+    padding: 0 10px;
+    border-width: 0;
+    border-style: none;
+    line-height: 32px!important;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 10px 10px;
+ }
+ .submit {
+   border-radius: 5px;
+   background-color: #7FC400;
+    color: #fff!important;
+    box-sizing: border-box;
+    padding: 0 10px;
+    border-width: 0;
+    border-style: none;
+    line-height: 50px!important;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+ }
+ .login {
+   border-radius: 5px;
+   background-color: #eee;
+    color: #999;
+    box-sizing: border-box;
+    padding: 0 10px;
+    border-width: 0;
+    border-style: none;
+    line-height: 32px!important;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px
+ }
+
+ .login-form {
+   display: flex;
+   align-content: space-between;
+   flex-direction: column;
 
  }
+
+.login-input{
+  border-radius: 5px;
+  background-color: #fff;
+
+   box-sizing: border-box;
+   padding: 0 10px;
+   border-width: 0;
+   border-style: none;
+   line-height: 50px!important;
+   font-weight: 700;
+   font-size: 16px;
+   text-align: left;
+   color: #000;
+}
+.login-form-box{
+  border-radius: 5px;
+   color: #fff!important;
+   box-sizing: border-box;
+   padding: 0 10px;
+   border-width: 0;
+   border-style: none;
+   font-weight: 700;
+   font-size: 24px;
+   text-align: center;
+
+}
