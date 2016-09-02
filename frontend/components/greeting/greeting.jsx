@@ -7,7 +7,6 @@ import SessionForm from '../session_form/session_form';
 class Greeting extends React.Component{
   constructor(props){
     super(props);
-
     this.state= {
       modal: false,
       form: "signup",
@@ -63,11 +62,11 @@ class Greeting extends React.Component{
 
   personalGreeting(currentUser, logout) {return (
   	<hgroup className="header-group">
+      <button className="header-button" onClick={logout}>Log Out</button>
   		<h2 className="header-name">Hi, {currentUser.username}!</h2>
       <h3 className="header-favorites">
-        wellcome to Game Pod
+        welcome to Game Pod
       </h3>
-  		<button className="header-button" onClick={logout}>Log Out</button>
 
 
   	</hgroup>
