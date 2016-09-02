@@ -9,7 +9,10 @@ class User < ActiveRecord::Base
 	after_initialize :ensure_session_token
 	before_validation :ensure_session_token_uniqueness
 
-	# has_many :favorites
+	has_many :projects
+	has_many :backers
+	has_many :rewards,
+	through: :backers
 	# has_many :favorite_benches,
 	# 	through: :favorites,
 	# 	source: :bench
