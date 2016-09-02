@@ -50,7 +50,8 @@ class ProjectIndex extends React.Component{
 
             {projects.map((project)=>(<div><img src={project.photo_url} /></div>))}
           </Slider>
-          <h1>Board Game</h1>
+          <h1 className="h1">Board Game</h1>
+          <button className="see-all">See all</button>
           <div className="category">
             {panel}
          </div>
