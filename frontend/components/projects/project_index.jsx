@@ -16,7 +16,7 @@ class ProjectIndex extends React.Component{
     const settings = {
           dots: true,
           infinite: true,
-          autoplay: false,
+          autoplay: true,
           autoplaySpeed: 2000,
           centerMode: true,
           speed: 500,
@@ -33,9 +33,9 @@ class ProjectIndex extends React.Component{
                       <p className="panel-description">{project.description}</p>
                       <div className="panel-footer">
                         <div className="meter animate">
-                          <span style={{width: (project.funded*100/project.goal)+"%"}}><span></span></span>
+                          <span style={{width: Math.min((project.funded*100/project.goal),100)+"%"}}><span></span></span>
                         </div>
-                        
+
                         <label className="panel-fundlabel">funded</label>
                         <p className="panel-fund">{project.funded}</p>
                         <p className="panel-enddate">{project.end_date}</p>
