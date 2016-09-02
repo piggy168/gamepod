@@ -48,7 +48,10 @@ class Greeting extends React.Component{
     this.setState({form: "login"});
   }
 
-
+  out(){
+    this.setState({modal:false});
+    this.props.logout();
+  }
   sessionLinks(){ return(
     <nav className="login-signup">
       <button className="login" onClick={this.openLoginModal.bind(this)}> Login</button>
@@ -62,7 +65,7 @@ class Greeting extends React.Component{
 
   personalGreeting(currentUser, logout) {return (
   	<hgroup className="header-group">
-      <button className="header-button" onClick={logout}>Log Out</button>
+      <button className="header-button" onClick={this.out.bind(this)}>Log Out</button>
   		<h2 className="header-name">Hi, {currentUser.username}!</h2>
       <h3 className="header-favorites">
         welcome to Game Pod
