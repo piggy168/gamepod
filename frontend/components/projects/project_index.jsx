@@ -23,11 +23,12 @@ class ProjectIndex extends React.Component{
           dots: true,
           infinite: true,
           autoplay: true,
-          autoplaySpeed: 2000,
+          autoplaySpeed: 4000,
           centerMode: true,
           speed: 500,
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          fade: true
         };
 
     const panel = projects.map((project)=>{return(
