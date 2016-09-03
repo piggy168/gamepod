@@ -41,7 +41,7 @@
  }
 
  img {
-   display: block;
+   max-width: 700px;
    width: 100%;
    height: auto;
  }
@@ -220,6 +220,8 @@ body {
       margin: 20px 20px;
       background: white;
       position: relative;
+      cursor:pointer;
+
   }
 
   p.panel-title {
@@ -371,4 +373,9 @@ p.panel-fund {
 .h1 {
   margin: 30px 0 0 20px;
   display: inline-block;
+}
+.slick-list{
+  margin: auto;
+  max-width: 700px;
+  max-height: 400px;
 }
