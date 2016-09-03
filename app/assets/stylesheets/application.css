@@ -78,12 +78,13 @@
 body {
    font-family: Sans-Serif;
    line-height: 1;
-   background-image: url("http://res.cloudinary.com/dlszpthqv/image/upload/v1472685928/bg_ycfh0z.jpg");
-   background-size: cover;
-   background-repeat: no-repeat,
+   background-image: url("http://res.cloudinary.com/dlszpthqv/image/upload/v1472887661/Screen_Shot_2016-09-03_at_12.26.53_AM_zbt5mc.png");
+   background-size: contain;
+
  }
  header {
    height: 50px;
+   background-image: url("http://newbernhistorical.org/wp-content/uploads/2009/07/header.jpg");
  }
 
 
@@ -91,6 +92,7 @@ body {
  .header-link {
    font-family: Sans-Serif;
    font-size: 32px;
+   color: white;
    display:inline;
    float:left;
    margin: 10px 10px;
