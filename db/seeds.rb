@@ -3,8 +3,8 @@
   Project.create(
       title: "project #{i}",
       description: "this is going to be a long description for testing",
-      creater_id: i,
-      end_date: "2016-8-31",
+      creater_id: i+1,
+      end_date: "2016-10-#{i}",
       photo_url: "http://cdn.skim.gs/images/c_fill,dpr_1.0,h_391,w_695/classic-board-game-feature/how-classic-board-games-can-be-fun-and-educational",
       goal: 10,
       funded: i,

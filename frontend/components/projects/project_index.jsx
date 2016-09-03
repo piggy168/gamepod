@@ -1,13 +1,19 @@
 import React from 'react';
 import Slider from 'react-slick';
+import {hashHistory} from 'react-router';
 
 class ProjectIndex extends React.Component{
   constructor(props){
     super(props);
+    this.showDetail = this.showDetail.bind(this);
   }
   componentDidMount(){
     this.props.requestProjects();
 
+  }
+
+  showDetail(id){
+    hashHistory.push(`/projects/${id}`);
   }
 
   render (){
@@ -23,13 +29,12 @@ class ProjectIndex extends React.Component{
           slidesToShow: 1,
           slidesToScroll: 1
         };
-    const style = {width: "50%"};
 
     const panel = projects.map((project)=>{return(
-                    <div className="panel">
+                    <div className="panel" onClick={this.showDetail.bind(this, project.id)}>
                       <img className="panel-image" src={project.photo_url} />
                       <p className="panel-title">{project.title}</p>
-                      <p className="panel-creater">{project.creater_id}</p>
+                      <p className="panel-creater">{project.owner}</p>
                       <p className="panel-description">{project.description}</p>
                       <div className="panel-footer">
                         <div className="meter animate">
