@@ -24,11 +24,11 @@ class ProjectIndex extends React.Component{
           infinite: true,
           autoplay: true,
           autoplaySpeed: 4000,
-          centerMode: true,
+          centerMode: false,
           speed: 500,
           slidesToShow: 1,
           slidesToScroll: 1,
-          fade: true
+          respondTo: "min"
         };
 
     const panel = projects.map((project)=>{return(
@@ -50,7 +50,7 @@ class ProjectIndex extends React.Component{
 
                   );});
     return(
-      <div>
+      <div className="content">
         <h1>Projects</h1>
           <Slider {...settings}>
 
