@@ -40,11 +40,7 @@
    list-style: none;
  }
 
- img {
-   max-width: 700px;
-   width: 100%;
-   height: auto;
- }
+
 
  input[type="password"],
  input[type="email"],
@@ -83,11 +79,17 @@ body {
 
  }
  header {
-   height: 50px;
+   position: fixed;
+   top: 0%;
+   z-index: 50;
+   width: 100%;
+   height: 70px;
    background-image: url("http://newbernhistorical.org/wp-content/uploads/2009/07/header.jpg");
  }
 
-
+.content{
+  margin: 90px 0 0 0;
+}
 
  .header-link {
    font-family: Sans-Serif;
@@ -95,7 +97,7 @@ body {
    color: white;
    display:inline;
    float:left;
-   margin: 10px 10px;
+   margin: 20px 20px;
  }
 
  .login-signup {
@@ -121,7 +123,7 @@ body {
     cursor: pointer;
     font-weight: 700;
     font-size: 16px;
-    margin: 10px 10px;
+    margin: 20px 20px;
  }
  .submit {
    border-radius: 5px;
@@ -203,6 +205,9 @@ body {
 .slick-slide img {
     display: block;
     max-height: 60vh;
+    max-width: 700px;
+    width: 100%;
+    height: auto;
 }
 
 .slick-dots {
@@ -210,6 +215,7 @@ body {
   }
 
   img.panel-image {
+      width: 100%;
       border-top-left-radius: inherit;
       border-top-right-radius: inherit;
   }
@@ -274,9 +280,6 @@ p.panel-fund {
     flex-wrap: wrap;
 }
 
-.slick-list {
-    padding: 0px!important;
-}
 .meter {
 	height: 10px;  /* Can be anything */
   width: 250px;

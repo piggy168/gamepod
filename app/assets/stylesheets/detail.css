@@ -1,6 +1,8 @@
 img.detail-img {
     height: 400px;
     width: 700px;
+    display: inline;
+    float: left;
 }
 
 p.detail-title {
@@ -32,11 +34,6 @@ p.detail-label {
       margin: 20px 20px;
       background: white;
       width: 250px;
-}.detail-upper {}
-
-img.detail-img {
-    display: inline;
-    float: left;
 }
 
 .detail-upper {
@@ -64,7 +61,7 @@ img.detail-img {
   /* border: 2px black solid; */
   /* border-radius: 20px; */
   /* width: 900px; */
-  
+
 
 
 }
