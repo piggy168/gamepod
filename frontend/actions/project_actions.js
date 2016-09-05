@@ -2,7 +2,8 @@ export const ProjectConstants = {
    RECEIVE_PROJECTS: "RECEIVE_PROJECTS",
    REQUEST_PROJECTS: "REQUEST_PROJECTS",
    REQUEST_DETAIL: "REQUEST_DETAIL",
-   RECEIVE_DETAIL: "RECEIVE_DETAIL"
+   RECEIVE_DETAIL: "RECEIVE_DETAIL",
+   CREATE_PROJECT: "CREATE_PROJECT"
  };
 
 export const requestProjects = () => (
@@ -22,4 +23,9 @@ export const requestDetail = (id) => ({
 export const receiveDetail = (detail) => ({
   type: ProjectConstants.RECEIVE_DETAIL,
   detail
+});
+
+export const createProject = (project) => ({
+  type: ProjectConstants.CREATE_PROJECT,
+  project
 });
