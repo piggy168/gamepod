@@ -8,6 +8,7 @@ import configureStore from './store/store';
 import Modal from 'react-modal';
 
 
+
 document.addEventListener('DOMContentLoaded', () => {
   const orgError = console.error; // eslint-disable-line no-console
   console.error = (message) => { // eslint-disable-line no-console

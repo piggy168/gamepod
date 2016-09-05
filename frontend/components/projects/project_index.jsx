@@ -31,7 +31,8 @@ class ProjectIndex extends React.Component{
           respondTo: "min"
         };
 
-    const panel = projects.map((project)=>{return(
+    const panel = projects.
+    map((project)=>{return(
                     <div className="panel" onClick={this.showDetail.bind(this, project.id)}>
                       <img className="panel-image" src={project.photo_url} />
                       <p className="panel-title">{project.title}</p>

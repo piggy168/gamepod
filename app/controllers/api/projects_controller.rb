@@ -5,6 +5,22 @@ class Api::ProjectsController < ApplicationController
   end
 
   def create
+    @project = Project.new(project_params)
+    debugger
+    if @project.save
+        rewards = params[:project][:reward].each{|key, value|  params[:project][:reward][key][:project_id]=@project.id}
+        debugger
+        success = rewards.each {|key, reward|
+          Reward.new(title: reward[:title], description: reward[:description], amount: reward[:amount].to_i, limit: reward[:limit].to_i, project_id: reward[:project_id]).save}
+        debugger
+        if success.include?(false)
+          render json: "error", status: 500
+        else
+          render "api/projects/show"
+        end
+    else
+      render json: @project.errors.full_messages, status: 422
+    end
   end
 
   def show
@@ -13,12 +29,21 @@ class Api::ProjectsController < ApplicationController
   end
 
   def update
+    @project = Project.find(params[:id].to_i)
+    if @project.update(project_params)
+          render "api/projects/show"
+    else
+      render json: @project.errors.full_messages, status: 422
+    end
   end
 
   def edit
   end
 
   def destroy
+    @project = Project.find(params[:id].to_i)
+    @project.destroy
+    render index
   end
 
   private

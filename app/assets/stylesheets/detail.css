@@ -57,7 +57,7 @@ p.detail-label {
 .detail-container {
   display: flex;
   flex-direction: column;
-  margin: 10px auto 100px;
+  margin: 90px auto 100px;
   /* border: 2px black solid; */
   /* border-radius: 20px; */
   /* width: 900px; */
