@@ -6,5 +6,7 @@ class Project < ActiveRecord::Base
   class_name: "User"
 
   has_many :rewards
-  has_many :backers
+  has_many :backers,
+  through: :rewards,
+  source: :backers
 end

@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20160828100907) do
     t.integer  "goal",        null: false
     t.integer  "funded",      null: false
     t.string   "category",    null: false
+    t.text     "short",       null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -47,6 +48,7 @@ ActiveRecord::Schema.define(version: 20160828100907) do
     t.integer  "amount",      null: false
     t.integer  "project_id",  null: false
     t.integer  "limit"
+    t.integer  "sold",        null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -59,6 +61,7 @@ ActiveRecord::Schema.define(version: 20160828100907) do
     t.string   "session_token",   null: false
     t.string   "photo_url"
     t.text     "bio"
+    t.integer  "money",           null: false
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end

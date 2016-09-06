@@ -8,7 +8,8 @@
       photo_url: "http://cdn.skim.gs/images/c_fill,dpr_1.0,h_391,w_695/classic-board-game-feature/how-classic-board-games-can-be-fun-and-educational",
       goal: 10,
       funded: i,
-      category: "board game"
+      category: "board game",
+      short: "this is the short description"
     )
   end
 
@@ -17,6 +18,7 @@
       username: "User #{i}",
       password_digest: "adfa",
       session_token: "#{i}",
+      money: 100
     )
   end
 
@@ -26,13 +28,14 @@
       description: "hello",
       amount: i,
       project_id: i/2+1,
-      limit: i
+      limit: i,
+      sold: i/2
     )
   end
 
   30.times do |i|
     Backer.create(
       user_id: i/5+1,
-      reward_id: 15-(i/2)
+      reward_id: (15-(i/2))
     )
   end

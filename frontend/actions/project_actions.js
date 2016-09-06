@@ -3,7 +3,8 @@ export const ProjectConstants = {
    REQUEST_PROJECTS: "REQUEST_PROJECTS",
    REQUEST_DETAIL: "REQUEST_DETAIL",
    RECEIVE_DETAIL: "RECEIVE_DETAIL",
-   CREATE_PROJECT: "CREATE_PROJECT"
+   CREATE_PROJECT: "CREATE_PROJECT",
+   BACK_PROJECT: "BACK_PROJECT"
  };
 
 export const requestProjects = () => (
@@ -28,4 +29,10 @@ export const receiveDetail = (detail) => ({
 export const createProject = (project) => ({
   type: ProjectConstants.CREATE_PROJECT,
   project
+});
+
+export const backProject = (userID, rewardID) => ({
+  type: ProjectConstants.BACK_PROJECT,
+  userID,
+  rewardID
 });

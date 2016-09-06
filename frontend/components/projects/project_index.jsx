@@ -17,7 +17,6 @@ class ProjectIndex extends React.Component{
   }
 
   render (){
-
     const {projects} = this.props;
     const settings = {
           dots: true,
@@ -37,7 +36,7 @@ class ProjectIndex extends React.Component{
                       <img className="panel-image" src={project.photo_url} />
                       <p className="panel-title">{project.title}</p>
                       <p className="panel-creater">{project.owner}</p>
-                      <p className="panel-description">{project.description}</p>
+                      <p className="panel-description">{project.short}</p>
                       <div className="panel-footer">
                         <div className="meter animate">
                           <span style={{width: Math.min((project.funded*100/project.goal),100)+"%"}}><span></span></span>
