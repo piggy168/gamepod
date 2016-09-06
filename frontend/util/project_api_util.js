@@ -27,3 +27,18 @@ export const saveProject = function(success, project){
     error: () => console.log('error')
   });
   };
+
+  export const backingProject = function(success, user_id, reward_id){
+    $.ajax({
+      method: "POST",// ,
+      url: `api/backer/`,//
+      dataType: 'json',
+      data: {backer:
+        {
+        user_id: user_id,
+        reward_id: reward_id}
+      },
+      success,
+      error: () => console.log('error')
+    });
+    };

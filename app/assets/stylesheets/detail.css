@@ -87,6 +87,11 @@ p.reward-description {
     text-align: center;
 }
 
+p.poptext {
+    font-size: 20px;
+    color: white;
+}
+
 .reward-buy {
   border-radius: 5px;
   background-color: #e88d2b;
@@ -102,6 +107,26 @@ p.reward-description {
   text-align: center;
   margin: 20px auto;
   display: block;
+}
+.reward-confirm {
+  border-radius: 5px;
+background-color: #44d617;
+color: #fff!important;
+/* box-sizing: border-box; */
+padding: 0 10px;
+border-width: 0;
+border-style: none;
+line-height: 32px!important;
+cursor: pointer;
+font-weight: 700;
+font-size: 16px;
+text-align: center;
+margin: 20px auto;
+display: block;
+width: 80%;
+position: absolute;
+margin: auto;
+bottom: 5%;
 }
 p.detail-description {
     width: 566px;

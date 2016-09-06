@@ -6,6 +6,7 @@ class CreateRewards < ActiveRecord::Migration
       t.integer :amount, null: false
       t.integer :project_id, null: false
       t.integer :limit
+      t.integer :sold, null: false
 
       t.timestamps null: false
     end

@@ -10,10 +10,10 @@ import App from '../app';
 
 const AppRouter = () => (
   <Router history={ hashHistory }>
-    <Route path="/" component={ App }>
+    <Route path="/" onUpdate={() => window.scrollTo(0, 0)} component={ App }>
       <IndexRoute component= { ProjectIndexContainer }/>
-      <Route path="/projects/:projectId" component = { DetailContainer }/>
-      <Route path="/start" component = { StartFormContainer }/>
+      <Route path="/projects/:projectId" onUpdate={() => window.scrollTo(0, 0)} component = { DetailContainer }/>
+      <Route path="/start" onUpdate={() => window.scrollTo(0, 0)} component = { StartFormContainer }/>
     </Route>
   </Router>
 );

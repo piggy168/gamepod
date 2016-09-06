@@ -9,6 +9,7 @@ class CreateProjects < ActiveRecord::Migration
       t.integer :goal, null: false
       t.integer :funded, null: false
       t.string :category, null: false
+      t.text :short, null: false
 
 
       t.timestamps null: false

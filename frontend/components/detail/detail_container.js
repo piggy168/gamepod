@@ -1,13 +1,16 @@
 import {requestDetail} from '../../actions/project_actions';
+import {backProject} from '../../actions/project_actions';
 import Detail from './detail';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({
-  detail: state.detail
+  detail: state.detail,
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({
-  requestDetail: (id) => dispatch(requestDetail(id))
+  requestDetail: (id) => dispatch(requestDetail(id)),
+  fund: (userID, rewardID) => dispatch(backProject(userID, rewardID))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Detail);

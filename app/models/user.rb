@@ -12,7 +12,8 @@ class User < ActiveRecord::Base
 	has_many :projects
 	has_many :backers
 	has_many :rewards,
-	through: :backers
+	through: :backers,
+	source: :reward
 	# has_many :favorite_benches,
 	# 	through: :favorites,
 	# 	source: :bench
