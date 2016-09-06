@@ -1,0 +1,132 @@
+.detail-container {
+  max-width: 900px;
+  background-color: #efd9a7;
+  border-radius: 30px;
+}
+
+h1.form-legend {
+  text-align: center;
+  background-color: #f9f674;
+  border-radius: 20px;
+  background-size: cover;
+  width: 600px;
+  margin: 20px auto;
+
+}
+
+.wrapper {
+    /* float: left; */
+    background-color: beige;
+    margin: 10px;
+    padding: 10px;
+}
+
+p.form-title {
+    font-weight: 700;
+    float: left;
+    width: 150px;
+    margin:0 20px;
+}
+
+select.input-text {
+    float: left;
+    font-size: 16px;
+}
+
+input.input-text {
+    background-color: white;
+    width: 500px;
+}
+
+.form-add {
+  border-radius: 5px;
+  background-color: #e88d2b;
+  color: #fff!important;
+  box-sizing: border-box;
+  padding: 0 10px;
+  border-width: 0;
+  border-style: none;
+  line-height: 32px!important;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  margin: 20px auto;
+  display: block;
+}
+
+img.form-image {
+    float: left;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.form-textarea {
+    width: 570px;
+    height: 100px;
+    background-color: white;
+    padding: 3px;
+    margin: 12px;
+}
+
+.form-textarea-short {
+    width: 570px;
+    height: 40px;
+    background-color: white;
+    padding: 3px;
+    margin: 12px;
+}
+.form-reward-container {
+  float:left;
+  width: 600px;
+  background-color: #fdcb8b;
+  padding: 5px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.reward-wrapper {
+    float: left;
+    display: flex;
+    flex-direction: column;
+}
+
+input.input-text {
+    float: left;
+    width: 410px;
+}
+
+p.sub-title {
+    float: left;
+    width: 100px;
+}
+.sub-title2 {margin: 5px;}
+.form-layer {
+    display: inline-block;
+    margin: 5px;
+}
+.form-textarea2 {
+    width: 404px;
+    height: 100px;
+    background-color: white;
+    padding: 3px;
+    float: left;
+}
+
+.form-submit {
+  border-radius: 5px;
+  background-color: #e88d2b;
+  color: #fff!important;
+  box-sizing: border-box;
+  padding: 0 10px;
+  border-width: 0;
+  border-style: none;
+  line-height: 32px!important;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  margin: 20px auto;
+  display: block;
+  width: 200px;
+  height: 50px;
+}
