@@ -19,7 +19,7 @@ class SearchIndex extends React.Component{
 
     const panel = search.
     map((project)=>{return(
-                    <div className="panel" onClick={this.showDetail.bind(this, project.id)}>
+                    <div key={project.id} className="panel" onClick={this.showDetail.bind(this, project.id)}>
                       <img className="panel-image" src={project.photo_url} />
                       <p className="panel-title">{project.title}</p>
                       <p className="panel-creater">{project.owner}</p>
@@ -39,7 +39,6 @@ class SearchIndex extends React.Component{
     return(
       <div className="content">
         <h1>Search Result</h1>
-          <button className="see-all">See all</button>
           <div className="category">
             {panel}
          </div>
