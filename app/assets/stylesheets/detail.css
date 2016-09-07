@@ -37,7 +37,7 @@ p.detail-label {
 }
 
 .detail-upper {
-
+background-image: linear-gradient(to bottom, #f9f9f9, #b2ceff);
     margin: auto;
 }
 .detail-point {
@@ -51,6 +51,7 @@ p.detail-label {
     margin: 0px auto 30px;
     background-color: white;
     width: 900px;
+    background-image: linear-gradient(to bottom, #f9f9f9, #b2ceff);
     /* border-bottom-left-radius: 20px; */
     /* border-bottom-right-radius: 20px; */
 }
@@ -95,6 +96,7 @@ p.poptext {
 .reward-buy {
   border-radius: 5px;
   background-color: #e88d2b;
+  background-image: linear-gradient(to bottom, #fdbe60, #af6700);
   color: #fff!important;
   box-sizing: border-box;
   padding: 0 10px;

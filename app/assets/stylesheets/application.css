@@ -74,8 +74,9 @@
 body {
    font-family: Sans-Serif;
    line-height: 1;
-   background-image: url("http://res.cloudinary.com/dlszpthqv/image/upload/v1472887661/Screen_Shot_2016-09-03_at_12.26.53_AM_zbt5mc.png");
+   background-image: url("http://res.cloudinary.com/dlszpthqv/image/upload/v1473260536/simple-pattern-picture-wallpaper_jrdadv.jpg");
    background-size: contain;
+
 
  }
  header {
@@ -94,6 +95,39 @@ img.logo {
     height: 50px;
     float: left;
     margin: 10px 0 0 20px;
+    cursor: pointer;
+}
+.userinfo {
+    background-color: #bdd3ef;
+    background-image: linear-gradient(to bottom, #f9f9f9, #76a3ef);
+    height: 30px;
+    margin: auto 20px auto 0;
+    border-radius: 10px;
+    width: 100px;
+    padding: 5px;
+    border: 2px solid white;
+}
+h2.header-name {
+    padding: 0 0 0 20px;
+    text-align: center;
+    color: #0b2cef;
+}
+
+h3.header-favorites {
+    padding: 0 0 0 20px;
+    margin: 2px;
+    text-align: center;
+    font-size: 16px;
+}
+.imglog {
+  height:50px;
+   width: 50px;
+   margin: 10px -25px 10px 10px;
+   border-radius: 50%;
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   border: 2px solid white;
+   z-index: 1;
 }
  .header-link {
    font-family: Sans-Serif;
@@ -112,14 +146,14 @@ img.logo {
  .header-group {
    font-family: Sans-Serif;
    float:right;
-   display:inline;
+   display:flex;
  }
 
  .signup {
    border-radius: 5px;
    background-color: #7FC400;
     color: #fff;
-
+    background-image: linear-gradient(to bottom, #5be852, #216124);
     padding: 0 10px;
 
 
@@ -132,6 +166,7 @@ img.logo {
  .submit {
    border-radius: 5px;
    background-color: #7FC400;
+   background-image: linear-gradient(to bottom, #92ff40, #1f4a1b);
     color: #fff;
     line-height: 50px;
     cursor: pointer;
@@ -192,13 +227,11 @@ img.logo {
    color: #999;
    box-sizing: border-box;
    padding: 0 10px;
-   border-width: 0;
-   border-style: none;
    line-height: 32px!important;
    cursor: pointer;
    font-weight: 700;
    font-size: 16px;
-   margin: 10px 10px;
+   margin: 20px 00px;
    float: right;
 }
 .slick-slide img {
@@ -228,7 +261,12 @@ img.logo {
       background: white;
       position: relative;
       cursor:pointer;
+      background-image: linear-gradient(to bottom, #f9f9f9, #b2ceff);
+      transition: transform .3s;
+  }
 
+  .panel:hover {
+    transform: scale(1.1);
   }
 
   p.panel-title {

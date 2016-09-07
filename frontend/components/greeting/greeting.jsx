@@ -90,10 +90,13 @@ class Greeting extends React.Component{
         <input className='search-bar' name="q" type="text" size="40" placeholder="Search..." onChange={this.search.bind(this)}/>
       </form>
       <button className="header-button" onClick={this.out.bind(this)}>Log Out</button>
-  		<h2 className="header-name">Hi, {currentUser.username}!</h2>
-      <h3 className="header-favorites">
-        welcome to Game Pod
-      </h3>
+        <img className='imglog' src="http://res.cloudinary.com/dlszpthqv/image/upload/v1473270317/user_qtkf16.jpg"/>
+      <div className="userinfo">
+    		<h2 className="header-name">{currentUser.username}</h2>
+        <h3 className="header-favorites">
+          $ {currentUser.money}
+        </h3>
+      </div>
 
 
   	</hgroup>
