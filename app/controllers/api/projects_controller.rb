@@ -28,7 +28,15 @@ class Api::ProjectsController < ApplicationController
   def update
     @project = Project.find(params[:id].to_i)
     if @project.update(project_params)
+       rewards = params[:project][:reward]
+       success = rewards.each do |key, reward|
+        newreward=Reward.find(reward["id"].to_i).update(title: reward["title"], amount: reward["amount"].to_i, description: reward["description"])
+      end
+      if success.include?(false)
+        render json: "reward save error", status: 500
+      else
           render "api/projects/show"
+      end
     else
       render json: @project.errors.full_messages, status: 422
     end
@@ -49,5 +57,6 @@ class Api::ProjectsController < ApplicationController
     params.require(:project).permit(:title, :description, :photo_url,
     :creater_id, :end_date, :goal, :category, :funded, :short)
   end
+
 
 end

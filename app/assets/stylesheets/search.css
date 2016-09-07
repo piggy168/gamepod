@@ -1,0 +1,36 @@
+#search {
+
+}
+
+
+#search input[type="text"] {
+    margin: 20px;
+    height: 20px;
+    background: url("http://res.cloudinary.com/dlszpthqv/image/upload/v1473179756/search-icon-white-one-md_bpbd0b.png") no-repeat 10px 7px #666;
+    border: 0 none;
+    font: bold 16px Sans-serif;
+    color: #eee;
+    width: 100px;
+    padding: 8px 5px 6px 40px;
+
+    border-radius: 5px;
+    /* text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3); */
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+    }
+
+#search input[type="text"]:focus {
+    background: url("http://res.cloudinary.com/dlszpthqv/image/upload/v1473179762/search-icon-dark-grey-md_bgttee.png") no-repeat 10px 6px #fcfcfc;
+    color: #6a6f75;
+    width: 200px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    }

@@ -52,8 +52,17 @@ class Greeting extends React.Component{
     this.setState({modal:false});
     this.props.logout();
   }
+
+  search(e){
+    this.props.requestSearch(e.target.value);
+    hashHistory.push(`/search`);
+  }
+
   sessionLinks(){ return(
     <nav className="login-signup">
+      <div method="get" id="search">
+        <input name="q" type="text" size="40" placeholder="Discover" onChange={this.search.bind(this)}/>
+      </div>
       <button className="login" onClick={this.openLoginModal.bind(this)}> Login</button>
       <button className="signup" onClick={this.openSignupModal.bind(this)}> Sign up</button>
         <Modal isOpen={this.state.modal} onRequestClose={this.closeModal.bind(this)} style={this.state.style}>
@@ -65,6 +74,9 @@ class Greeting extends React.Component{
 
   personalGreeting(currentUser, logout) {return (
   	<hgroup className="header-group">
+      <form method="get" action="/search" id="search">
+        <input name="q" type="text" size="40" placeholder="Search..." onChange={this.search.bind(this)}/>
+      </form>
       <button className="header-button" onClick={this.out.bind(this)}>Log Out</button>
   		<h2 className="header-name">Hi, {currentUser.username}!</h2>
       <h3 className="header-favorites">
