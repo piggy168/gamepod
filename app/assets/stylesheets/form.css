@@ -41,6 +41,7 @@ input.input-text {
 .form-add {
   border-radius: 5px;
   background-color: #e88d2b;
+  background-image: linear-gradient(to bottom, #fdbe60, #af6700);
   color: #fff!important;
   box-sizing: border-box;
   padding: 0 10px;
@@ -115,6 +116,7 @@ p.sub-title {
 .form-submit {
   border-radius: 5px;
   background-color: #e88d2b;
+  background-image: linear-gradient(to bottom, #fdbe60, #af6700);
   color: #fff!important;
   box-sizing: border-box;
   padding: 0 10px;

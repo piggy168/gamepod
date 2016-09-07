@@ -7,6 +7,7 @@ import { saveProject } from '../util/project_api_util';
 import { backingProject } from '../util/project_api_util';
 import { Link, hashHistory } from 'react-router';
 import { updateProject } from '../util/project_api_util';
+import { update } from "../actions/session_actions";
 
 const ProjectsMiddleware = ({getState, dispatch}) => next => action => {
     switch(action.type){
@@ -34,7 +35,10 @@ const ProjectsMiddleware = ({getState, dispatch}) => next => action => {
 
       case ProjectConstants.BACK_PROJECT:
         const backSuccess = data => {
-          return(dispatch(receiveDetail(data)));
+
+            dispatch(receiveDetail(data));
+            dispatch(update(data.currentUser_id));
+
         };
 
         backingProject(backSuccess, action.userID, action.rewardID);
