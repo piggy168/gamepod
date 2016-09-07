@@ -33,6 +33,18 @@ class Greeting extends React.Component{
 
   }
 
+  componentDidMount () {
+    $('.search-bar').on('keyup', e => this.onKeyUp(e));
+  }
+
+  onKeyUp(e) {
+    e.preventDefault();
+    if (e.key === "Enter") {
+
+      $('.search-bar').val('');
+    }
+  }
+
   closeModal(){
     this.setState({modal: false});
 
@@ -61,7 +73,7 @@ class Greeting extends React.Component{
   sessionLinks(){ return(
     <nav className="login-signup">
       <div method="get" id="search">
-        <input name="q" type="text" size="40" placeholder="Discover" onChange={this.search.bind(this)}/>
+        <input className='search-bar' name="q" type="text" size="40" placeholder="Discover" onChange={this.search.bind(this)}/>
       </div>
       <button className="login" onClick={this.openLoginModal.bind(this)}> Login</button>
       <button className="signup" onClick={this.openSignupModal.bind(this)}> Sign up</button>
@@ -75,7 +87,7 @@ class Greeting extends React.Component{
   personalGreeting(currentUser, logout) {return (
   	<hgroup className="header-group">
       <form method="get" action="/search" id="search">
-        <input name="q" type="text" size="40" placeholder="Search..." onChange={this.search.bind(this)}/>
+        <input className='search-bar' name="q" type="text" size="40" placeholder="Search..." onChange={this.search.bind(this)}/>
       </form>
       <button className="header-button" onClick={this.out.bind(this)}>Log Out</button>
   		<h2 className="header-name">Hi, {currentUser.username}!</h2>

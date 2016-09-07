@@ -82,7 +82,7 @@ class Detail extends React.Component{
         <div className="reward-section">
           <p className="detail-sublabel">Support this project</p>
           {detail.reward.map((reward, index)=>(
-            <div className="reward-container">
+            <div key={reward.id} className="reward-container">
               <p className="reward-amount">${reward.amount}</p>
               <p className="reward-title">{reward.title}</p>
               <p className="reward-description">{reward.description}</p>

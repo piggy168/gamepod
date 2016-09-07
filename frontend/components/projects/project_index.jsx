@@ -32,7 +32,7 @@ class ProjectIndex extends React.Component{
 
     const panel = projects.
     map((project)=>{return(
-                    <div className="panel" onClick={this.showDetail.bind(this, project.id)}>
+                    <div key={project.id} className="panel" onClick={this.showDetail.bind(this, project.id)}>
                       <img className="panel-image" src={project.photo_url} />
                       <p className="panel-title">{project.title}</p>
                       <p className="panel-creater">{project.owner}</p>
@@ -54,7 +54,7 @@ class ProjectIndex extends React.Component{
         <h1>Projects</h1>
           <Slider {...settings}>
 
-            {projects.map((project)=>(<div><img src={project.photo_url} /></div>))}
+            {projects.map((project)=>(<div key={project.id}><img src={project.photo_url} /></div>))}
           </Slider>
           <h1 className="h1">Board Game</h1>
           <button className="see-all">See all</button>

@@ -1,5 +1,14 @@
 a.start {
     color: white;
-    margin: 33px 30px;
+    margin: 20px 30px;
     float: left;
+    height: 20px;
+    background: url("http://res.cloudinary.com/dlszpthqv/image/upload/v1473257252/wooden-hammer_318-86312_1_hip4kh.png") no-repeat 10px 7px #666;
+    border: 0 none;
+    font: bold 16px Sans-serif;
+    color: #bbb;
+    width: 120px;
+    padding: 9px 15px 6px 40px;
+    border-radius: 5px;
+
 }

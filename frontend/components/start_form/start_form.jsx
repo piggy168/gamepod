@@ -2,6 +2,7 @@ import React from 'react';
 import {hashHistory} from 'react-router';
 import { DateField, Calendar } from 'react-date-picker';
 
+
 class StartForm extends React.Component{
   constructor(props){
     super(props);
@@ -103,7 +104,7 @@ class StartForm extends React.Component{
     }
     const reward = this.state.reward.map((rewards, index) => {
       return(
-        <div>
+        <div key={index}>
         <p className="form-title">Reward {index+1}</p>
         <div className="form-reward-container">
           <div className='form-layer'>
