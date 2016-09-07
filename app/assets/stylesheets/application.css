@@ -107,7 +107,7 @@ img.logo {
  .login-signup {
    font-family: Sans-Serif;
    float:right;
-   display:inline;
+   display:flex;
  }
  .header-group {
    font-family: Sans-Serif;
@@ -118,12 +118,12 @@ img.logo {
  .signup {
    border-radius: 5px;
    background-color: #7FC400;
-    color: #fff!important;
-    box-sizing: border-box;
+    color: #fff;
+
     padding: 0 10px;
-    border-width: 0;
-    border-style: none;
-    line-height: 32px!important;
+
+
+    line-height: 32px;
     cursor: pointer;
     font-weight: 700;
     font-size: 16px;
@@ -132,12 +132,8 @@ img.logo {
  .submit {
    border-radius: 5px;
    background-color: #7FC400;
-    color: #fff!important;
-    box-sizing: border-box;
-    padding: 0 10px;
-    border-width: 0;
-    border-style: none;
-    line-height: 50px!important;
+    color: #fff;
+    line-height: 50px;
     cursor: pointer;
     font-weight: 700;
     font-size: 20px;
@@ -148,10 +144,9 @@ img.logo {
    border-radius: 5px;
    background-color: #eee;
     color: #999;
-    box-sizing: border-box;
+
     padding: 0 10px;
-    border-width: 0;
-    border-style: none;
+    margin: auto;
     line-height: 32px!important;
     cursor: pointer;
     font-weight: 700;

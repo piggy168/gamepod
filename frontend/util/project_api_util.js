@@ -28,6 +28,17 @@ export const saveProject = function(success, project){
   });
   };
 
+  export const updateProject = function(success, project){
+    $.ajax({
+      method: "PATCH",// ,
+      url: `api/projects/${project.id}`,//
+      dataType: 'json',
+      data: {project: project},
+      success,
+      error: () => console.log('error')
+    });
+    };
+
   export const backingProject = function(success, user_id, reward_id){
     $.ajax({
       method: "POST",// ,

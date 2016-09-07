@@ -6,6 +6,7 @@ import { receiveDetail } from '../actions/project_actions';
 import { saveProject } from '../util/project_api_util';
 import { backingProject } from '../util/project_api_util';
 import { Link, hashHistory } from 'react-router';
+import { updateProject } from '../util/project_api_util';
 
 const ProjectsMiddleware = ({getState, dispatch}) => next => action => {
     switch(action.type){
@@ -23,6 +24,14 @@ const ProjectsMiddleware = ({getState, dispatch}) => next => action => {
           return dispatch(receiveDetail(data));};
         saveProject(createSuccess,action.project);
         return next(action);
+
+      case ProjectConstants.UPDATE_DETAIL:
+        const updateSuccess = data => {
+          hashHistory.push(`/projects/${data.id}`);
+          return dispatch(receiveDetail(data));};
+        updateProject(updateSuccess,action.project);
+        return next(action);
+
       case ProjectConstants.BACK_PROJECT:
         const backSuccess = data => {
           return(dispatch(receiveDetail(data)));
