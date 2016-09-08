@@ -11,7 +11,6 @@ import { update } from "../actions/session_actions";
 import { destroyProject } from '../util/project_api_util';
 
 const ProjectsMiddleware = ({getState, dispatch}) => next => action => {
-  debugger
     switch(action.type){
       case ProjectConstants.REQUEST_PROJECTS:
         const success = data => dispatch(receiveProjects(data));

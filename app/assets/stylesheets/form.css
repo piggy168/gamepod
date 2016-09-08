@@ -132,3 +132,10 @@ p.sub-title {
   width: 200px;
   height: 50px;
 }
+.warning {
+    padding: 100px;
+    color: red;
+    font-size: 26px;
+    text-align: right;
+    background-image: url("http://newbernhistorical.org/wp-content/uploads/2009/07/header.jpg");
+}
