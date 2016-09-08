@@ -41,3 +41,14 @@ export const update = function(id, success){
 		}
 	});
 };
+
+export const fetchProfile = function(id, success){
+	$.ajax({
+		method: 'GET',
+		url: `/api/users/${id}`,
+		success,
+		error: () => {
+		  console.log("Logout error in SessionApiUtil#logout");
+		}
+	});
+};

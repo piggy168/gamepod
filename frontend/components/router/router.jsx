@@ -7,6 +7,7 @@ import DetailContainer from "../detail/detail_container";
 import StartFormContainer from "../start_form/start_form_container";
 import SearchContainer from "../search/search_container";
 import EditFormContainer from "../start_form/edit_form_container";
+import ProfileContainer from "../profile/profile_container";
 //Components
 import App from '../app';
 
@@ -18,6 +19,7 @@ const AppRouter = () => (
       <Route path="/start" onUpdate={() => window.scrollTo(0, 0)} component = { StartFormContainer }/>
       <Route path="/search" onUpdate={() => window.scrollTo(0, 0)} component = { SearchContainer }/>
       <Route path="/edit/:projectId" onUpdate={() => window.scrollTo(0, 0)} component = { EditFormContainer }/>
+      <Route path="/user/:id" onUpdate={() => window.scrollTo(0, 0)} component = { ProfileContainer }/>
     </Route>
   </Router>
 );

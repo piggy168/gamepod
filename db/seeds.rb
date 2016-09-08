@@ -18,6 +18,8 @@
       username: "User #{i}",
       password_digest: "adfa",
       session_token: "#{i}",
+      photo_url: "http://www.caretofun.net/wp-content/uploads/2015/07/beautiful-girl-profile-caretofun.net-5.jpg",
+      bio:"Synopsis Aviator Amelia Earhart was born on July 24, 1897 in Atchison, Kansas. In 1923, Earhart, fondly known as became the 16th woman to be issued a pilot's license. She had several notable flights, becoming the first woman to fly across the Atlantic Ocean in 1928, as well as the first person to fly over both the Atlantic and Pacific. In 1937, she mysteriously disappeared while trying to circumnavigate the globe from the equator. Since then, several theories have formed regarding Earhart's last days, many of which have been connected to various artifacts that have been found on Pacific islands—including clothing, tools and, more recently, freckle cream. Earhart was legally declared dead in 1939.",
       money: 100
     )
   end

@@ -9,7 +9,8 @@ class User < ActiveRecord::Base
 	after_initialize :ensure_session_token
 	before_validation :ensure_session_token_uniqueness
 
-	has_many :projects
+	has_many :projects,
+	foreign_key: :creater_id
 	has_many :backers
 	has_many :rewards,
 	through: :backers,

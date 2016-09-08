@@ -261,6 +261,7 @@ h3.header-favorites {
       background: white;
       position: relative;
       cursor:pointer;
+      box-shadow: 10px 10px 5px rgba(136,136,136, 0.8);
       background-image: linear-gradient(to bottom, #f9f9f9, #b2ceff);
       transition: transform .3s;
   }

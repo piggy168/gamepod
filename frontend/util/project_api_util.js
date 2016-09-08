@@ -17,6 +17,15 @@ export const fetchDetail = function(success, id){
   });
   };
 
+export const destroyProject = function(id){
+
+  $.ajax({
+    method: "DELETE",// ,
+    url: `api/projects/${id}`,//
+    error: () => console.log('error')
+  });
+  };
+
 export const saveProject = function(success, project){
   $.ajax({
     method: "POST",// ,
