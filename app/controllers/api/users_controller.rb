@@ -4,6 +4,7 @@ class Api::UsersController < ApplicationController
 		# debugger
 		@user = User.new(user_params)
 		@user.money = 100
+		@user.photo_url = "http://res.cloudinary.com/dlszpthqv/image/upload/v1473270317/user_qtkf16.jpg"
 		if @user.save
 			login(@user)
 			render "api/users/show"

@@ -90,7 +90,7 @@ class Greeting extends React.Component{
         <input className='search-bar' name="q" type="text" size="40" placeholder="Search..." onChange={this.search.bind(this)}/>
       </form>
       <button className="header-button" onClick={this.out.bind(this)}>Log Out</button>
-        <img className='imglog' src="http://res.cloudinary.com/dlszpthqv/image/upload/v1473270317/user_qtkf16.jpg"/>
+        <img className='imglog' src={currentUser.photo_url} onClick={()=>hashHistory.push(`/user/${currentUser.id}`)}/>
       <div className="userinfo">
     		<h2 className="header-name">{currentUser.username}</h2>
         <h3 className="header-favorites">

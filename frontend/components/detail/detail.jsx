@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import { hashHistory } from 'react-router';
 
 
 class Detail extends React.Component{
@@ -41,25 +42,44 @@ class Detail extends React.Component{
   }
 
   fund(){
-
     this.props.fund(this.props.currentUser.id, this.props.detail.reward[this.state.clickOnReward].id);
-
     this.closeModal();
+  }
+
+  delete(id){
+    this.props.delete(id);
+    hashHistory.push("/");
   }
 
   render(){
     let popText;
+
     if (this.state.clickOnReward === -1) {
        popText =  "";
     } else {
        popText = `Fund $ ${this.props.detail.reward[this.state.clickOnReward].amount} to this project
        and receive ${this.props.detail.reward[this.state.clickOnReward].title}`;
     }
+    let control;
+    if ((this.props.currentUser) && (this.props.currentUser.id === this.props.detail.creater_id)){
+      control = <div className="control">
+        <button className="edit" onClick={()=>hashHistory.push(`/edit/${this.props.detail.id}`)}>Edit Project</button>
+        <button className="delete" onClick={this.delete.bind(this,this.props.detail.id)}>Delete Project</button>
+      </div>;
+    } else {
+      control = <div></div>;
+      }
     const today = new Date();
     const {detail} = this.props;
     const panel = <div className="detail-container">
+        <div className="detail-banner">
         <p className="detail-title"> {detail.title} </p>
+        {control}
+        <div className="detail-creater">
+        <img className="detail-pic" src={detail.owner_photo_url} onClick={()=>hashHistory.push(`/user/${detail.creater_id}`)}/>
         <p className="detail-owner"> by {detail.owner} </p>
+        </div>
+        </div>
         <div className="detail-upper">
           <img className="detail-img" src={detail.photo_url} />
           <div className="detail-point">

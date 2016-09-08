@@ -3,8 +3,10 @@ export const SessionConstants = {
   LOGOUT: "LOGOUT",
   SIGNUP: "SIGNUP",
   UPDATE: "UPDATE",
+  REQUEST_PROFILE: "REQUEST_PROFILE",
   RECEIVE_CURRENT_USER: "RECEIVE_CURRENT_USER",
-  RECEIVE_ERRORS: "RECEIVE_ERRORS"
+  RECEIVE_ERRORS: "RECEIVE_ERRORS",
+  RECEIVE_PROFILE: "RECEIVE_PROFILE"
 };
 
 export const signup = user => ({
@@ -20,6 +22,16 @@ export const login = user => ({
 export const update = (id) => ({
   type: SessionConstants.UPDATE,
   id
+});
+
+export const requestProfile = (id) => ({
+  type: SessionConstants.REQUEST_PROFILE,
+  id
+});
+
+export const receiveProfile = (profile) => ({
+  type: SessionConstants.RECEIVE_PROFILE,
+  profile
 });
 
 export const logout = () => ({
