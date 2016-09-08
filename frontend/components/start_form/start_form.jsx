@@ -127,8 +127,9 @@ class StartForm extends React.Component{
       </div>
       );
     });
-    return(
-      <div className="detail-container">
+    let content;
+    if (this.props.currentUser){
+      content = <div className="detail-container">
         <h1 className="form-legend">Starting your project</h1>
          <div className='wrapper'>
           <p className="form-title">Project Title</p>
@@ -173,8 +174,13 @@ class StartForm extends React.Component{
             />
         </div>
       <button className="form-submit" onClick={this.submit.bind(this)}>Submit</button>
-      </div>
-
+      </div>;
+    } else {
+    content = <div className='warning'>Please Log in to Start a Proejct</div>;
+    }
+    debugger
+    return(
+      content
     );
   }
 }
