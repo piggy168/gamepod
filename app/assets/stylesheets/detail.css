@@ -310,3 +310,11 @@ p.reward-sold {
     text-align: center;
     margin: 0 0 -10px;
 }
+
+p.site-banner {
+    font-size: 60px;
+    color: white;
+    margin: -200px auto;
+    padding: 0 50px;
+    text-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
+}

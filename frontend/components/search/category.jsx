@@ -7,7 +7,7 @@ class Category extends React.Component{
     this.showDetail = this.showDetail.bind(this);
   }
   componentDidMount(){
-    this.props.requestCategory("boardgame");
+    this.props.requestCategory(this.props.params.type);
   }
 
   showDetail(id){

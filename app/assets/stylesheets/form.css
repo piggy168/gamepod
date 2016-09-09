@@ -194,3 +194,27 @@ p.sub-title {
   transform: rotate(-5deg);
   rotate: 20;
 }
+
+.title-button {
+    border-radius: 5px;
+    /* background-color: #7FC400; */
+    background-image: linear-gradient(to bottom, #fdbe60, #af6700);
+    color: #fff;
+    line-height: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    /* display: block; */
+    /* margin: -200px 0 0 0; */
+    position: absolute;
+    top: 75%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 150px;
+}
+
+.slick-initialized .slick-slide {
+    position: relative;
+  }
