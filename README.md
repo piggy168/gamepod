@@ -13,16 +13,16 @@ This site will be functional with the following features, bug-free navigation, a
 - [ ] Hosting on Heroku
 - [ ] Browsing the project on the sites
 - [ ] User sign up/ log in (for starting a project and backing projects)
-[login]
+![login]
 - [ ] User backing a project
-[backing]
+![backing]
 - [ ] Search projects
 - [ ] Categories / Discover
-[search]
+![search]
 - [ ] featured projects
-[feature]
+![feature]
 - [ ] user info page
-[info]
+![info]
 
 [login]: ./docs/screenshots/login.png
 [backing]:./docs/screenshots/backing.png
@@ -51,7 +51,8 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 };
 ```
 - [ ] React-redux
- [Redux Flow] [Redux Flow]:./docs/screenshots/redux.jpg
+ ![Redux Flow]
+ [Redux Flow]:./docs/screenshots/redux.jpg
 ```Rails-Backend
 class Api::SearchController < ApplicationController
   def index
