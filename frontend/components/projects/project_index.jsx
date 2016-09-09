@@ -24,6 +24,14 @@ class ProjectIndex extends React.Component{
   mobilegame(){
     hashHistory.push("/category/mobilegame");
   }
+  gameOne(){
+    hashHistory.push("/projects/1");
+  }
+
+  gameTwo(){
+    hashHistory.push("/projects/3");
+  }
+
   render (){
     const {projects} = this.props;
     const settings = {
@@ -37,6 +45,7 @@ class ProjectIndex extends React.Component{
           slidesToScroll: 1,
 
         };
+
 
     const boardgamepanel = projects.boardgames.
     map((project)=>{return(
@@ -99,9 +108,15 @@ class ProjectIndex extends React.Component{
     return(
       <div className="content">
           <Slider {...settings}>
-            <div><img src="http://smythstoysblog.com/wp-content/uploads/2016/03/Over-watch-banner.jpg"/></div>
-            <div><img src="https://lambdamugames.files.wordpress.com/2015/02/bannerart_pixelpowers.png?w=1200"/></div>
-            <div><img src="http://1.bp.blogspot.com/-quzFSWfLPNM/UmEUrmB0L9I/AAAAAAAAAg0/RMsy8_VQ1Z8/s1600/Banner+15.jpg"/></div>
+            <div><img src="http://1.bp.blogspot.com/-quzFSWfLPNM/UmEUrmB0L9I/AAAAAAAAAg0/RMsy8_VQ1Z8/s1600/Banner+15.jpg"/>
+            <p className="site-banner">Game Pod - Where your game dreams come true</p>
+          </div>
+              <div><img src="http://smythstoysblog.com/wp-content/uploads/2016/03/Over-watch-banner.jpg" />
+                <p className="title-button" onClick={this.gameOne.bind(this)}>View Project</p>
+            </div>
+            <div><img src="https://lambdamugames.files.wordpress.com/2015/02/bannerart_pixelpowers.png?w=1200" />
+            <p className="title-button" onClick={this.gameTwo.bind(this)}>View Project</p>
+            </div>
           </Slider>
           <h1 className="h1">Board Game</h1>
           <button className="see-all" onClick={this.boardgame.bind(this)}>See all</button>

@@ -63,7 +63,7 @@ class Detail extends React.Component{
        and receive ${this.props.detail.reward[this.state.clickOnReward].title}`;
     }
     let buy;
-    if (this.props.currentUser){
+    if (this.props.currentUser && this.state.clickOnReward !== -1){
       if (this.props.currentUser.money < this.props.detail.reward[this.state.clickOnReward].amount){
         buy = <p className="popwarning">Not enough credit to purchase the reward</p>;
       } else {
