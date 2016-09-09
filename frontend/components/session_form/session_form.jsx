@@ -18,7 +18,7 @@ class SessionForm extends React.Component {
 	}
 
 	guestlogin(){
-    const guestUser = ['1', '1', '1', '1', '1', '1', '1', '1', '1',
+    const guestUser = ['g', 'u', 'e', 's', 't', '1', '1', '1', '1',
 '1', '1', '1'];
      let idx = 0;
      let interval = setInterval(()=>{

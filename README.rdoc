@@ -1,28 +1,34 @@
-== README
+# Pinitt
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Live site][Game Pod] or [Game Pod-heroku]
 
-Things you may want to cover:
+[Game Pod]: http://gamepod.com
+[Game Pod-heroku]: http://gamepod.herokuapp.com
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Game Pod is a online crowd-funding platform inspired by KickStarter, implemented using Ruby on Rails and React/Redux.
+This site will be functional with the following features, bug-free navigation, and great css styling.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+# Features
+- [ ] Hosting on Heroku
+- [ ] Browsing the project on the sites
+- [ ] User sign up/ log in (for starting a project and backing projects)
+[login]
+- [ ] User backing a project
+[backing]
+- [ ] Search projects
+- [ ] Categories / Discover
+[search]
+- [ ] featured projects
+[feature]
+- [ ] user info page
+[info]
+
+[login]:http://res.cloudinary.com/dlszpthqv/image/upload/v1473450754/Screen_Shot_2016-09-09_at_12.50.35_PM_fchfwr.png
+[backing]:http://res.cloudinary.com/dlszpthqv/image/upload/v1473450755/Screen_Shot_2016-09-09_at_12.51.05_PM_siln6j.png
+[search]:http://res.cloudinary.com/dlszpthqv/image/upload/v1473450756/Screen_Shot_2016-09-09_at_12.44.54_PM_dvnsro.png
+[feature]:http://res.cloudinary.com/dlszpthqv/image/upload/v1473450755/Screen_Shot_2016-09-09_at_12.44.32_PM_skqd5e.png
+[info]:http://res.cloudinary.com/dlszpthqv/image/upload/v1473450752/Screen_Shot_2016-09-09_at_12.51.15_PM_z9xyna.png
+
+# Technical features
+-[ ] React-Redux

@@ -116,6 +116,14 @@ User.create(
       money: 100
       )
 
+User.create(
+username: "guest1",
+password: "111111",
+photo_url: "http://res.cloudinary.com/dlszpthqv/image/upload/v1473270317/user_qtkf16.jpg",
+bio:"I am the guest",
+money: 100
+)
+
 
 Project.create(
     title: "Overwatch",
