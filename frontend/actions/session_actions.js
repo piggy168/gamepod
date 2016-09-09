@@ -6,7 +6,8 @@ export const SessionConstants = {
   REQUEST_PROFILE: "REQUEST_PROFILE",
   RECEIVE_CURRENT_USER: "RECEIVE_CURRENT_USER",
   RECEIVE_ERRORS: "RECEIVE_ERRORS",
-  RECEIVE_PROFILE: "RECEIVE_PROFILE"
+  RECEIVE_PROFILE: "RECEIVE_PROFILE",
+  UPDATE_USER: "UPDATE_USER"
 };
 
 export const signup = user => ({
@@ -22,6 +23,12 @@ export const login = user => ({
 export const update = (id) => ({
   type: SessionConstants.UPDATE,
   id
+});
+
+export const updateUser = (id, data) => ({
+  type: SessionConstants.UPDATE_USER,
+  id,
+  data,
 });
 
 export const requestProfile = (id) => ({

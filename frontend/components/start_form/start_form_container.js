@@ -3,7 +3,7 @@ import StartForm from './start_form';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({
-    idea: state.projects,
+    detail: state.detail,
     currentUser: state.session.currentUser
   });
 

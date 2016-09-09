@@ -28,6 +28,7 @@ class StartForm extends React.Component{
 
 
 
+
   upload(e){
     e.preventDefault();
     cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, function(error, results){
@@ -96,6 +97,14 @@ class StartForm extends React.Component{
   }
 
   render (){
+
+    let error;
+    if (this.props.detail.error.length>0){
+      error = <p className="form-error">{this.props.detail.error[0]}</p>;
+    } else {
+      error = <div></div>;
+    }
+
     let today;
     if (this.state.end_date === "") {
        today =  new Date();
@@ -137,10 +146,10 @@ class StartForm extends React.Component{
           </div>
         <div className='wrapper'>
           <p className="form-title">Project Category</p>
-            <select className="input-text" type="text" onChange={this.setCategory.bind(this)}>
-              <option value="board game">Board Game</option>
-              <option value="video game">Console Game</option>
-              <option value="mobile game">Mobile Game</option>
+            <select className="input-text" defaultvalue="boardgame" type="text" onChange={this.setCategory.bind(this)}>
+              <option value="boardgame">Board Game</option>
+              <option value="videogame">Console Game</option>
+              <option value="mobilegame">Mobile Game</option>
             </select>
         </div>
         <div className='wrapper'>
@@ -174,11 +183,11 @@ class StartForm extends React.Component{
             />
         </div>
       <button className="form-submit" onClick={this.submit.bind(this)}>Submit</button>
+      {error}
       </div>;
     } else {
-    content = <div className='warning'>Please Log in to Start a Proejct</div>;
+    content = <div className='warning'>Please Log in to Start a Proejct or continue browsing other projects by clicking the logo</div>;
     }
-    debugger
     return(
       content
     );

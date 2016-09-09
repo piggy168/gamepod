@@ -6,7 +6,8 @@ export const ProjectConstants = {
    CREATE_PROJECT: "CREATE_PROJECT",
    BACK_PROJECT: "BACK_PROJECT",
    UPDATE_DETAIL: "UPDATE_DETAIL",
-   DELETE_PROJECT: "DELETE_PROJECT"
+   DELETE_PROJECT: "DELETE_PROJECT",
+   RECEIVE_OTHER_ERROR: "RECEIVE_OTHER_ERROR"
  };
 
 export const requestProjects = () => (
@@ -47,4 +48,9 @@ export const backProject = (userID, rewardID) => ({
 export const deleteProject = (id) => ({
   type: ProjectConstants.DELETE_PROJECT,
   id
+});
+
+export const receiveOtherError = (error) => ({
+  type: ProjectConstants.RECEIVE_OTHER_ERROR,
+  error
 });

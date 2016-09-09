@@ -16,7 +16,12 @@ class SearchIndex extends React.Component{
 
   render (){
     const {search} = this.props;
-
+    let result;
+    if (search.length < 1){
+      result = <h1>No match found</h1>;
+     } else {
+      result = <h1>Search Result</h1>;
+     }
     const panel = search.
     map((project)=>{return(
                     <div key={project.id} className="panel" onClick={this.showDetail.bind(this, project.id)}>
@@ -38,7 +43,7 @@ class SearchIndex extends React.Component{
                   );});
     return(
       <div className="content">
-        <h1>Search Result</h1>
+         {result}
           <div className="category">
             {panel}
          </div>

@@ -22,7 +22,7 @@ class Greeting extends React.Component{
         content : {
             margin          : 'auto',
             width           : '250px',
-            height          : '270px',
+            height          : '340px',
             padding         : '20px',
             border          : 'none',
             backgroundColor : 'rgba(0, 0, 0, 0.7)',

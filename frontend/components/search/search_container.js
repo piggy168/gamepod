@@ -1,4 +1,4 @@
-import requestSearch from "../../actions/search_actions";
+import {requestSearch} from "../../actions/search_actions";
 import SearchIndex from './search';
 import { connect } from 'react-redux';
 

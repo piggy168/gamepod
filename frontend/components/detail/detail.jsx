@@ -56,9 +56,23 @@ class Detail extends React.Component{
 
     if (this.state.clickOnReward === -1) {
        popText =  "";
-    } else {
+    } else if ((this.props.currentUser) && (this.props.currentUser.id === this.props.detail.creater_id)){
+       popText = "You can't fund your own project!";
+    }else{
        popText = `Fund $ ${this.props.detail.reward[this.state.clickOnReward].amount} to this project
        and receive ${this.props.detail.reward[this.state.clickOnReward].title}`;
+    }
+    let buy;
+    if (this.props.currentUser){
+      if (this.props.currentUser.money < this.props.detail.reward[this.state.clickOnReward].amount){
+        buy = <p className="popwarning">Not enough credit to purchase the reward</p>;
+      } else {
+      buy = <div>
+        <p className="poptext">{popText}</p>
+      <button className="reward-confirm" onClick={this.fund.bind(this)}>Fund</button></div>;
+      }
+    } else {
+      buy = <p className="popwarning">Please login to purchase reward</p>;
     }
     let control;
     if ((this.props.currentUser) && (this.props.currentUser.id === this.props.detail.creater_id)){
@@ -73,12 +87,15 @@ class Detail extends React.Component{
     const {detail} = this.props;
     const panel = <div className="detail-container">
         <div className="detail-banner">
-        <p className="detail-title"> {detail.title} </p>
-        {control}
+          <div className="deatail-topleft">
+            <p className="detail-cat"> --{detail.category}-- </p>
+            <p className="detail-title"> {detail.title} </p>
+        </div>
         <div className="detail-creater">
         <img className="detail-pic" src={detail.owner_photo_url} onClick={()=>hashHistory.push(`/user/${detail.creater_id}`)}/>
         <p className="detail-owner"> by {detail.owner} </p>
         </div>
+        {control}
         </div>
         <div className="detail-upper">
           <img className="detail-img" src={detail.photo_url} />
@@ -106,15 +123,22 @@ class Detail extends React.Component{
               <p className="reward-amount">${reward.amount}</p>
               <p className="reward-title">{reward.title}</p>
               <p className="reward-description">{reward.description}</p>
-              <button className="reward-buy" onClick={this.openModal.bind(this, index)}>Purchase</button>
+              {(()=>{if(reward.limit < 1){  return <div>
+                <p className="reward-sold">{reward.sold} sold</p>
+                <button className="reward-buy" onClick={this.openModal.bind(this, index)}>Purchase</button></div>
+              } else if(reward.limit - reward.sold > 0 ) { return <div>
+                <p className="reward-sold">{reward.sold} out of {reward.limit} sold</p>
+                <button className="reward-buy" onClick={this.openModal.bind(this, index)}>Purchase</button></div>
+              } else { return<div>
+              <p className="sold-out">Sold out!</p></div>
+              }})()}
             </div>
           ))}
         </div>
       </div>
       <Modal isOpen={this.state.modal} onRequestClose={this.closeModal.bind(this)} style={this.state.style}>
 
-        <p className="poptext">{popText}</p>
-        <button className="reward-confirm" onClick={this.fund.bind(this)}>Fund</button>
+        {buy}
       </Modal>
       </div>
     ;

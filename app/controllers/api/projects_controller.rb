@@ -1,6 +1,8 @@
 class Api::ProjectsController < ApplicationController
   def index
-    @projects = Project.all
+    @boardgames = Project.where(category: "boardgame").first(3)
+    @videogames = Project.where(category: "videogame").first(3)
+    @mobilegames = Project.where(category: "mobilegame").first(3)
     render "api/projects/index"
   end
 
@@ -11,7 +13,7 @@ class Api::ProjectsController < ApplicationController
         success = rewards.each {|key, reward|
           Reward.new(title: reward[:title], description: reward[:description], amount: reward[:amount].to_i, limit: reward[:limit].to_i, project_id: reward[:project_id], sold: 0).save}
         if success.include?(false)
-          render json: "error", status: 500
+          render json: "error creating rewards", status: 500
         else
           render "api/projects/show"
         end

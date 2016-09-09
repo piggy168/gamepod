@@ -4,7 +4,7 @@ import { receiveCurrentUser,
          receiveProfile
        } from '../actions/session_actions';
 
-import { login, signup, logout, update, fetchProfile } from '../util/session_api_util';
+import { login, signup, logout, update, fetchProfile, updateUser } from '../util/session_api_util';
 
 export default ({getState, dispatch}) => next => action => {
   const successCallback = user => dispatch(receiveCurrentUser(user));
@@ -18,6 +18,10 @@ export default ({getState, dispatch}) => next => action => {
       return next(action);
     case SessionConstants.UPDATE:
       update(action.id, successCallback);
+      return next(action);
+    case SessionConstants.UPDATE_USER:
+      const successUpdate = profile => dispatch(receiveProfile(profile));
+      updateUser(action.id, action.data, successUpdate);
       return next(action);
     case SessionConstants.LOGOUT:
       logout(() => next(action));
