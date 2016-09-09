@@ -7,7 +7,8 @@ class SessionForm extends React.Component {
 		super(props);
 		this.state = {
 			username: "",
-			password: ""
+			password: "",
+			error: false
 		};
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
@@ -15,6 +16,29 @@ class SessionForm extends React.Component {
 	componentDidUpdate(){
 		this.redirectIfLoggedIn();
 	}
+
+	guestlogin(){
+    const guestUser = ['1', '1', '1', '1', '1', '1', '1', '1', '1',
+'1', '1', '1'];
+     let idx = 0;
+     let interval = setInterval(()=>{
+       if (idx < 6) {
+         const name = this.state.username + guestUser[idx];
+         this.setState({ username: name });
+       } else if (idx < 12) {
+         const pw = this.state.password + guestUser[idx];
+         this.setState({ password: pw });
+       } else {
+         this.props.login({user:{
+	 				username: this.state.username,
+	 				password: this.state.password
+	 				}});
+         clearInterval(interval);
+       }
+       idx += 1;
+     }, 200);
+  }
+
 
 	redirectIfLoggedIn(){
 		if (this.props.loggedIn){
@@ -28,27 +52,36 @@ class SessionForm extends React.Component {
 
 	handleSubmit(e){
 		e.preventDefault();
-		const user = this.state;
-		if (this.props.formType === "login"){
-		this.props.login({user});
-		} else {
-			this.props.signup({user});
+		if (this.state.password.length < -6){
+				this.setState({
+				error: true
+			});
+
+		}else {
+			this.state.error = false;
+			if (this.props.formType === "login"){
+			this.props.login({user:{
+				username: this.state.username,
+				password: this.state.password
+				}});
+			} else {
+				this.props.signup({user:
+					{
+				username: this.state.username,
+				password: this.state.password
+			}});
+			}
 		}
 	}
 
-	renderErrors(){
-		return(
-			<ul>
-				{this.props.errors.map( (error, i) => (
-					<li key={`error-${i}`}>
-						{error}
-					</li>
-				))}
-			</ul>
-		);
-	}
-
 	render() {
+
+		let error;
+		if (this.props.errors.length>0){
+			error = <p className="error">{this.props.errors[0]}</p>;
+		} else {
+			error = <div></div>;
+		}
 		return (
 
 			<div className="login-form-container">
@@ -73,10 +106,11 @@ class SessionForm extends React.Component {
 								value={this.state.password}
 								onChange={this.update("password")}
 								className="login-input" />
-				
 
 						<br />
 						<input className="submit" type="submit" value="Submit"/>
+						{error}
+						<input className="guest" onClick={this.guestlogin.bind(this)} value="Guest Login"/>
 					</div>
 				</form>
 			</div>

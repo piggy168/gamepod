@@ -52,3 +52,15 @@ export const fetchProfile = function(id, success){
 		}
 	});
 };
+
+export const updateUser = function(id, data, success){
+	$.ajax({
+		method: 'PATCH',
+		url: `/api/users/${id}`,
+		data: {user: data},
+		success,
+		error: () => {
+		  console.log("Logout error in SessionApiUtil#logout");
+		}
+	});
+};

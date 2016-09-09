@@ -136,6 +136,61 @@ p.sub-title {
     padding: 100px;
     color: red;
     font-size: 26px;
-    text-align: right;
-    background-image: url("http://newbernhistorical.org/wp-content/uploads/2009/07/header.jpg");
+    text-align: center;
+
+}
+
+.error {
+  color: red;
+  font-size: 16px;
+  margin: 10px 0 0 0;
+}
+.form-error{
+    color: red;
+    font-size: 20px;
+    margin: 0px 0 20px;
+    text-align: center;
+}
+.popwarning {
+
+    color: red;
+    font-size: 26px;
+    text-align: center;
+}
+
+.guest{
+  border-radius: 5px;
+  background-color: #7FC400;
+  background-image: linear-gradient(to bottom, #fdbe60, #af6700);
+   color: #fff;
+   line-height: 50px;
+   cursor: pointer;
+   font-weight: 700;
+   font-size: 20px;
+   text-align: center;
+   display: block;
+   margin-top: 20px;
+ }
+
+ .sold-out{
+   border-radius: 5px;
+  /* background-color: #e88d2b; */
+  /* background-image: linear-gradient(to bottom, #fdbe60, #af6700); */
+  color: red;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 2px red solid;
+  /* border-width: 2px; */
+  /* border-style: none; */
+  line-height: 32px!important;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  margin: 20px auto;
+  display: block;
+  width: 200px;
+  height: 50px;
+  transform: rotate(-5deg);
+  rotate: 20;
 }

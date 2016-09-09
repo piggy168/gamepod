@@ -91,6 +91,12 @@ class EditForm extends React.Component{
   }
 
   render (){
+    let error;
+    if (this.props.detail.error.length>0){
+      error = <p className="form-error">{this.props.detail.error[0]}</p>;
+    } else {
+      error = <div></div>;
+    }
 
     if (this.update === false && this.props.detail.title !== undefined){
       const {detail} = this.props;
@@ -178,6 +184,7 @@ class EditForm extends React.Component{
             />
         </div>
       <button className="form-submit" onClick={this.save.bind(this)}>Save</button>
+      {error}
       </div>
 
     );

@@ -26,29 +26,29 @@ export const destroyProject = function(id){
   });
   };
 
-export const saveProject = function(success, project){
+export const saveProject = function(success, project, error){
   $.ajax({
     method: "POST",// ,
     url: `api/projects/`,//
     dataType: 'json',
     data: {project: project},
     success,
-    error: () => console.log('error')
+    error
   });
   };
 
-  export const updateProject = function(success, project){
+  export const updateProject = function(success, project, error){
     $.ajax({
       method: "PATCH",// ,
       url: `api/projects/${project.id}`,//
       dataType: 'json',
       data: {project: project},
       success,
-      error: () => console.log('error')
+      error
     });
     };
 
-  export const backingProject = function(success, user_id, reward_id){
+  export const backingProject = function(success, user_id, reward_id ,error){
     $.ajax({
       method: "POST",// ,
       url: `api/backer/`,//
@@ -59,6 +59,6 @@ export const saveProject = function(success, project){
         reward_id: reward_id}
       },
       success,
-      error: () => console.log('error')
+      error
     });
     };

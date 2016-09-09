@@ -1,5 +1,5 @@
 
-15.times do |i|
+5.times do |i|
   Project.create(
       title: "project #{i}",
       description: "this is going to be a long description for testing",
@@ -8,10 +8,38 @@
       photo_url: "http://cdn.skim.gs/images/c_fill,dpr_1.0,h_391,w_695/classic-board-game-feature/how-classic-board-games-can-be-fun-and-educational",
       goal: 10,
       funded: i,
-      category: "board game",
+      category: "boardgame",
       short: "this is the short description"
     )
   end
+
+  5.times do |i|
+    Project.create(
+        title: "project #{i+5}",
+        description: "this is going to be a long description for testing",
+        creater_id: i+1,
+        end_date: "2016-10-#{i}",
+        photo_url: "http://cdn.skim.gs/images/c_fill,dpr_1.0,h_391,w_695/classic-board-game-feature/how-classic-board-games-can-be-fun-and-educational",
+        goal: 10,
+        funded: i,
+        category: "videogame",
+        short: "this is the short description"
+      )
+    end
+
+  10.times do |i|
+    Project.create(
+        title: "project #{i+30}",
+        description: "this is going to be a long description for testing",
+        creater_id: i+1,
+        end_date: "2016-10-#{i}",
+        photo_url: "http://cdn.skim.gs/images/c_fill,dpr_1.0,h_391,w_695/classic-board-game-feature/how-classic-board-games-can-be-fun-and-educational",
+        goal: 10,
+        funded: i,
+        category: "mobilegame",
+        short: "this is the short description"
+      )
+    end
 
   15.times do |i|
     User.create(

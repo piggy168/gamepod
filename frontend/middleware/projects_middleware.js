@@ -9,8 +9,14 @@ import { Link, hashHistory } from 'react-router';
 import { updateProject } from '../util/project_api_util';
 import { update } from "../actions/session_actions";
 import { destroyProject } from '../util/project_api_util';
+import { receiveOtherError } from "../actions/project_actions";
 
 const ProjectsMiddleware = ({getState, dispatch}) => next => action => {
+    const errorCallback = xhr => {
+      const errors = xhr.responseJSON;
+      dispatch(receiveOtherError(errors));
+    };
+    
     switch(action.type){
       case ProjectConstants.REQUEST_PROJECTS:
         const success = data => dispatch(receiveProjects(data));
@@ -23,8 +29,8 @@ const ProjectsMiddleware = ({getState, dispatch}) => next => action => {
       case ProjectConstants.CREATE_PROJECT:
         const createSuccess = data => {
           hashHistory.push(`/projects/${data.id}`);
-          return dispatch(receiveDetail(data));};
-        saveProject(createSuccess,action.project);
+          dispatch(receiveDetail(data));};
+        saveProject(createSuccess,action.project,errorCallback);
         return next(action);
       case ProjectConstants.DELETE_PROJECT:
         destroyProject(action.id);
@@ -33,7 +39,7 @@ const ProjectsMiddleware = ({getState, dispatch}) => next => action => {
         const updateSuccess = data => {
           hashHistory.push(`/projects/${data.id}`);
           return dispatch(receiveDetail(data));};
-        updateProject(updateSuccess,action.project);
+        updateProject(updateSuccess,action.project,errorCallback);
         return next(action);
       case ProjectConstants.BACK_PROJECT:
         const backSuccess = data => {
@@ -43,7 +49,7 @@ const ProjectsMiddleware = ({getState, dispatch}) => next => action => {
 
         };
 
-        backingProject(backSuccess, action.userID, action.rewardID);
+        backingProject(backSuccess, action.userID, action.rewardID,errorCallback);
         return next(action);
       default:
         return next(action);

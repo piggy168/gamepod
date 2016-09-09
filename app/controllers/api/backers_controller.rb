@@ -5,16 +5,17 @@ class Api::BackersController < ApplicationController
     if @backer.save
       @project = @backer.project
       @user = @backer.user
+      @reward = @backer.reward
       @project.funded += @backer.reward.amount
-      @backer.reward.sold += 1
+      @reward.sold += 1
       @backer.user.money -=@backer.reward.amount
-        if (@backer.save && @project.save && @user.save)
+        if (@backer.save && @project.save && @user.save && @reward.save)
           render "api/backers/show"
         else
-          render json: "error", status: 500
+          render json: "error saving transaction", status: 500
         end
       else
-        render json: "error", status: 500
+        render json: "error making transaction", status: 500
       end
   end
 
