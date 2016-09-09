@@ -1,8 +1,8 @@
-# Pinitt
+# Game Pod
 
 [Live site][Game Pod] or [Game Pod-heroku]
 
-[Game Pod]: http://gamepod.com
+[Game Pod]: http://gamepod.ca
 [Game Pod-heroku]: http://gamepod.herokuapp.com
 
 Game Pod is a online crowd-funding platform inspired by KickStarter, implemented using Ruby on Rails and React/Redux.
@@ -24,14 +24,14 @@ This site will be functional with the following features, bug-free navigation, a
 - [ ] user info page
 [info]
 
-[login]:http://res.cloudinary.com/dlszpthqv/image/upload/v1473450754/Screen_Shot_2016-09-09_at_12.50.35_PM_fchfwr.png
-[backing]:http://res.cloudinary.com/dlszpthqv/image/upload/v1473450755/Screen_Shot_2016-09-09_at_12.51.05_PM_siln6j.png
-[search]:http://res.cloudinary.com/dlszpthqv/image/upload/v1473450756/Screen_Shot_2016-09-09_at_12.44.54_PM_dvnsro.png
-[feature]:http://res.cloudinary.com/dlszpthqv/image/upload/v1473450755/Screen_Shot_2016-09-09_at_12.44.32_PM_skqd5e.png
-[info]:http://res.cloudinary.com/dlszpthqv/image/upload/v1473450752/Screen_Shot_2016-09-09_at_12.51.15_PM_z9xyna.png
+[login]: ./docs/screenshots/login.png
+[backing]:./docs/screenshots/backing.png
+[search]:./docs/screenshots/search.png
+[feature]:./docs/screenshots/feature.png
+[info]:./docs/screenshots/info.png
 
 # Technical features
--[ ] User-Login Error Feedback
+- [ ] User-Login Error Feedback
 ```JaveScript
 const mapStateToProps = state => ({
   loggedIn: Boolean(state.session.currentUser),
@@ -50,9 +50,8 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   };
 };
 ```
--[ ] React-redux
- [Redux Flow] [Redux Flow]:http://image.slidesharecdn.com/reactreduxintroduction-151124165017-lva1-app6891/95/react-redux-introduction-33-638.jpg?cb=1448383914
--[ ] Rails-Backend
+- [ ] React-redux
+ [Redux Flow] [Redux Flow]:./docs/screenshots/redux.jpg
 ```Rails-Backend
 class Api::SearchController < ApplicationController
   def index
@@ -66,7 +65,7 @@ class Api::SearchController < ApplicationController
   end
 end
 ```
--[ ] React-Modal
+- [ ] React-Modal
 ```
 this.state= {
   modal: false
@@ -91,7 +90,7 @@ openLoginModal(){
    <SessionFormContainer formType={this.state.form} />
 </Modal>
 ```
--[ ] Single-page Routes
+- [ ] Single-page Routes
 ```JaveScript
 const AppRouter = () => (
   <Router history={ hashHistory }>
@@ -107,13 +106,13 @@ const AppRouter = () => (
   </Router>
 );
 ```
--[ ] Real-time Search Bar
+- [ ] Real-time Search Bar
 ```JS
 <form method="get" action="/search" id="search">
   <input className='search-bar' name="q" type="text" size="40" placeholder="Search..." onChange={this.search.bind(this)}/>
 </form>
 ```
--[ ] Error-Feedback from Backend
+- [ ] Error-Feedback from Backend
 ```JS
 const DetailReducer = (state = {reward:[], error:[]}, action) => {
     switch(action.type){
