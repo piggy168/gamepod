@@ -29,7 +29,7 @@ class Detail extends React.Component{
         }
     };
   }
-  componentDidMount(){
+  componentWillMount(){
     this.props.requestDetail(this.props.params.projectId);
   }
 
