@@ -32,7 +32,7 @@ class EditForm extends React.Component{
 
   upload(e){
     e.preventDefault();
-    cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, function(error, results){
+    cloudinary.openUploadWidget({cloud_name: "dlszpthqv", upload_preset: "e7urfwyg"}, function(error, results){
       if(!error){
         this.setState({photo_url: results[0].url});
       }
