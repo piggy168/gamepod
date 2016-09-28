@@ -1,8 +1,8 @@
 class Api::ProjectsController < ApplicationController
   def index
-    @boardgames = Project.where(category: "boardgame").first(3)
-    @videogames = Project.where(category: "videogame").first(3)
-    @mobilegames = Project.where(category: "mobilegame").first(3)
+    @boardgames = Project.where(category: "boardgame").first(4)
+    @videogames = Project.where(category: "videogame").first(4)
+    @mobilegames = Project.where(category: "mobilegame").first(4)
     render "api/projects/index"
   end
 

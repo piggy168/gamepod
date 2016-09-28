@@ -4,7 +4,7 @@
 
 
 #search input[type="text"] {
-    margin: 20px;
+    margin: 20px 10px;
     height: 20px;
     background: url("http://res.cloudinary.com/dlszpthqv/image/upload/v1473179756/search-icon-white-one-md_bpbd0b.png") no-repeat 10px 7px #666;
     border: 0 none;

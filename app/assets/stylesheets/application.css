@@ -311,6 +311,7 @@ p.panel-fund {
 .category {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .meter {

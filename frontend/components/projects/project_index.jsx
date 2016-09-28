@@ -123,7 +123,7 @@ class ProjectIndex extends React.Component{
           <div className="category">
             {boardgamepanel}
          </div>
-         <h1 className="h1">Vidoe Game</h1>
+         <h1 className="h1">Video Game</h1>
          <button className="see-all" onClick={this.videogame.bind(this)}>See all</button>
          <div className="category">
            {videogamepanel}

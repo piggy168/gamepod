@@ -290,16 +290,36 @@ p.detail-sublabel {
   cursor: pointer;
   font-weight: 700;
   font-size: 16px;
-  margin: 20px 20px;
-  margin: 0 0 30px;
+
+  margin: 0 0 20px;
   float: right;
 }
+.save-bio{
+  border-radius: 5px;
+  background-color: #7FC400;
+  color: #fff;
+  background-image: linear-gradient(to bottom, #5be852, #216124);
+  padding: 0 10px;
+  line-height: 32px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  float: right;
+}
+
 
 .deatail-topleft {
   display: flex;
   flex-direction: column;
   float: left;
   margin: 30px 0 0 0;
+}
+
+.textarea-bio {
+    height: 225px;
+    width: 250px;
+    background: white;
+    margin: 0 0 10px;
 }
 
 p.detail-cat {

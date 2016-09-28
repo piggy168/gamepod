@@ -1,6 +1,6 @@
 class Api::SearchController < ApplicationController
   def index
-    @search = Project.where('title Like ?', "%#{params[:data]}%")
+    @search = Project.where('lower(title) Like ?', "%#{params[:data].downcase}%")
     render "api/search/index"
   end
 
