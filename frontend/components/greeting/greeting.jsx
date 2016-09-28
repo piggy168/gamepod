@@ -60,6 +60,7 @@ class Greeting extends React.Component{
     this.setState({form: "login"});
   }
 
+
   startProject(){
     if (this.props.currentUser){
       hashHistory.push("/start");
@@ -82,7 +83,9 @@ class Greeting extends React.Component{
       <div method="get" id="search">
         <input className='search-bar' name="q" type="text" size="40" placeholder="Discover" onChange={this.search.bind(this)}/>
       </div>
+
       <button className="start" onClick={this.startProject.bind(this)}> Start a project</button>
+
       <button className="login" onClick={this.openLoginModal.bind(this)}> Login</button>
       <button className="signup" onClick={this.openSignupModal.bind(this)}> Sign up</button>
         <Modal isOpen={this.state.modal} onRequestClose={this.closeModal.bind(this)} style={this.state.style}>
@@ -97,7 +100,9 @@ class Greeting extends React.Component{
       <form method="get" action="/search" id="search">
         <input className='search-bar' name="q" type="text" size="40" placeholder="Search..." onChange={this.search.bind(this)}/>
       </form>
+
       <button className="start" onClick={this.startProject.bind(this)}> Start a project</button>
+
       <button className="header-button" onClick={this.out.bind(this)}>Log Out</button>
         <img className='imglog' src={currentUser.photo_url} onClick={()=>hashHistory.push(`/user/${currentUser.id}`)}/>
       <div className="userinfo">

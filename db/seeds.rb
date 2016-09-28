@@ -165,8 +165,10 @@ When playing with The River, players begin the game by placing the river tiles. 
         creater_id: 1,
         end_date: "2016-10-30",
         photo_url: "http://www.theboardgamefamily.com/wp-content/uploads/2013/05/CarcRiverLayout.jpg",
+
         goal: 500,
         funded: 125,
+
         category: "boardgame",
         short: "Carcassonne The River adds just 12 land tiles to the Carcassonne board game."
 
@@ -199,7 +201,9 @@ CRITICAL REVIEWS
     creater_id: 2,
     end_date: "2016-11-30",
     photo_url: "https://lambdamugames.files.wordpress.com/2015/02/footerbuilder_ph.png?w=1200",
+
     goal: 2000,
+
     funded: 1789,
     category: "mobilegame",
     short: "SAVING THE WORLD. ONE PIXEL AT A TIME – Even Utopia needs heroes. Who will come to your aid? Pixel Powers is a game about creating heroes, managing city-wide crises, and going on ridiculous adventures."
@@ -285,7 +289,9 @@ Taking a unique role within the team, players must plan their strategy to mesh w
     creater_id: 5,
     end_date: "2016-11-15",
     photo_url: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQRGCnnmkM3MJMO5rG7rJ2oFSktx3yMYMSUss8kUyomKaSI6aCv1Q",
+
     goal: 25000,
+
     funded: 24567,
     category: "boardgame",
     short: "The players are disease-fighting specialists whose mission is to treat disease hotspots while researching cures for each of four plagues before they get out of hand."
@@ -318,7 +324,9 @@ signed games remain mired in obscurity. There are a number of theories explainin
       creater_id: 4,
       end_date: "2016-12-25",
       photo_url: "http://cdn.theatlantic.com/static/mt/assets/culture_test/catan_board_gadl_post.jpg",
+
       goal: 50 ,
+
       funded:0 ,
       category: "boardgame",
       short: "This is a fun family game, competitve and cooprative"
@@ -355,7 +363,9 @@ Project.create(
     creater_id: 6,
     end_date: "2016-12-15",
     photo_url: "http://www.gamehead.com/sites/default/files/styles/gh_article_banner_teaser/public/images/article/thumb_files/1749/agricola-part-3-6hdf12c.png?itok=lNKLP3JZ",
+
     goal:300000 ,
+
     funded:23456 ,
     category: "boardgame",
     short: "Raymond starts you on a journey of getting better at Agricola in a new Getting Better series."
@@ -408,7 +418,9 @@ What are the rules?
 Outside of convention rules, you must abide by ",
     creater_id: 4,
     end_date: "2016-12-31",
+
     photo_url: "http://res.cloudinary.com/dlszpthqv/image/upload/v1475100211/maxresdefault_o6fxpn.jpg",
+
     goal: 1000000,
     funded: 58000,
     category: "videogame",
@@ -459,7 +471,9 @@ Magic Duels is the best way to start playing Magic, offering virtually unlimited
     end_date: "2016-12-12",
     photo_url: "http://i0.wp.com/gametimereviews.com/wp-content/uploads/2016/04/magic-the-gathering-tcg.jpg?resize=790%2C444",
     goal: 25000 ,
+
     funded: 22123,
+
     category: "videogame",
     short: "Start playing Magic Duels today and take your place among tens of millions of Magic players worldwide."
   )
@@ -581,7 +595,9 @@ The game features 32 Levels, with at least four Levels per area. The Levels them
     goal: 35000,
     funded: 127 ,
     category: "videogame",
+
     short: "The Links can also dress up in multiple different Outfits which grant specific abilities. These Outfits can be crafted from Materials found in Levels at Madame Couture's.[7][19][21] Before starting a level"
+
   )
 
   Reward.create(
@@ -623,7 +639,9 @@ Read more at http://www.gamerevolution.com/cheats/candy-crush-saga#IOu8h8tZ2DezX
       end_date: "2016-10-25",
       photo_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0PuVvd4M4P7fVJgPJEeAMsiKwkK3xE-DImGELR2Hb2KOvQ0dQCQ",
       goal: 10000,
+
       funded: 3323,
+
       category: "mobilegame",
       short: "Crushing candies on the bottom is better than crushing candies at the top"
     )

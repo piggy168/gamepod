@@ -290,7 +290,6 @@ p.detail-sublabel {
   cursor: pointer;
   font-weight: 700;
   font-size: 16px;
-
   margin: 0 0 20px;
   float: right;
 }
@@ -315,12 +314,14 @@ p.detail-sublabel {
   margin: 30px 0 0 0;
 }
 
+
 .textarea-bio {
     height: 225px;
     width: 250px;
     background: white;
     margin: 0 0 10px;
 }
+
 
 p.detail-cat {
     margin: 0px 30px 10px;

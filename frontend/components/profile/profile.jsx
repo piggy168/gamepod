@@ -5,7 +5,9 @@ import Modal from 'react-modal';
 class Profile extends React.Component{
   constructor(props){
     super(props);
+
     this.update=false;
+
     this.state={
       photo_url: "",
       bio: "",
@@ -28,7 +30,9 @@ class Profile extends React.Component{
             backgroundColor : 'rgba(0, 0, 0, 0.7)',
           }
       }
+
     };
+
   }
   componentDidMount(){
     this.props.requestProfile(this.props.params.id);
@@ -40,7 +44,9 @@ class Profile extends React.Component{
 
   uploadPic(e){
     e.preventDefault();
+
     cloudinary.openUploadWidget({cloud_name: "dlszpthqv", upload_preset: "e7urfwyg"}, function(error, results){
+
       if(!error){
         this.state.photo_url=results[0].url;
         this.props.updateUser(this.props.profile.id, {
@@ -76,6 +82,7 @@ class Profile extends React.Component{
     this.state.photo_url=this.props.profile.photo_url;
     this.state.bio=this.props.profile.bio;
     this.update = true;}}
+
     let control;
     if ((this.props.currentUser) && (this.props.currentUser.id === this.props.profile.id)){
       control = <div className="control">
@@ -121,6 +128,7 @@ class Profile extends React.Component{
          <Modal isOpen={this.state.modal} onRequestClose={this.closeModal.bind(this)} style={this.state.style}>
             <textarea className='textarea-bio' onChange={this.updateText.bind(this)} value={this.state.bio}></textarea>
             <button className="save-bio" onClick={this.editBio.bind(this)} >Save</button>
+
          </Modal>
       </div>
     );
