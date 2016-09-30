@@ -9,7 +9,7 @@ class StartForm extends React.Component{
     this.state={
       title:"",
       photo_url:"",
-      category:"",
+      category:"boardgame",
       description: "",
       short: "",
       goal:0,
@@ -146,7 +146,7 @@ class StartForm extends React.Component{
           </div>
         <div className='wrapper'>
           <p className="form-title">Project Category</p>
-            <select className="input-text" defaultvalue="boardgame" type="text" onChange={this.setCategory.bind(this)}>
+            <select className="input-text" value={this.state.category} type="text" onChange={this.setCategory.bind(this)}>
               <option value="boardgame">Board Game</option>
               <option value="videogame">Console Game</option>
               <option value="mobilegame">Mobile Game</option>

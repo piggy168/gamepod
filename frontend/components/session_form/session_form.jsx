@@ -36,7 +36,7 @@ class SessionForm extends React.Component {
          clearInterval(interval);
        }
        idx += 1;
-     }, 200);
+     }, 100);
   }
 
 
