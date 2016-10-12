@@ -110,7 +110,7 @@ class Profile extends React.Component{
                     <div key={project.id} className="profile-panel" onClick={this.showDetail.bind(this, project.id)}>
                       <img className="panel-image" src={project.photo_url} />
                       <p className="panel-title">{project.title}</p>
-                      <p className="panel-description">{project.short}</p>
+                      <p className="panel-minidescription">{project.short}</p>
                       <div className="profile-panel-footer">
                         <p className="profile-panel-enddate">{project.end_date}</p>
                       </div>

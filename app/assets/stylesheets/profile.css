@@ -52,3 +52,7 @@ p.profile-title {
     display: inline-block;
     font-size: 20px;
   }
+  .panel-minidescription{
+    margin: 20px 10px;
+    font-size: 12px;
+  }
