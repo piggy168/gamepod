@@ -13,8 +13,8 @@ import CategoryContainer from "../search/category_container";
 import App from '../app';
 
 const AppRouter = () => (
-  <Router history={ hashHistory }>
-    <Route path="/" onUpdate={() => window.scrollTo(0, 0)} component={ App }>
+  <Router onUpdate={() => window.scrollTo(0, 0)} history={hashHistory}>
+    <Route path="/" component={ App }>
       <IndexRoute component= { ProjectIndexContainer }/>
       <Route path="/projects/:projectId" onUpdate={() => window.scrollTo(0, 0)} component = { DetailContainer }/>
       <Route path="/start" onUpdate={() => window.scrollTo(0, 0)} component = { StartFormContainer }/>

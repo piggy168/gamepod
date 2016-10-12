@@ -243,6 +243,7 @@ h3.header-favorites {
 
   img.panel-image {
       width: 100%;
+      max-height: 180px;
       border-top-left-radius: inherit;
       border-top-right-radius: inherit;
   }

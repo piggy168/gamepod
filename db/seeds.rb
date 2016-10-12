@@ -120,7 +120,7 @@ User.create(
 username: "guest1",
 password: "111111",
 photo_url: "http://res.cloudinary.com/dlszpthqv/image/upload/v1473270317/user_qtkf16.jpg",
-bio:"I am the guest",
+bio:"I am the guest, I am the greatest guest you can ever have. I know how to code, dance and play basketball.  League of Legends and Magic the gathering is the best game ever",
 money: 100
 )
 
@@ -286,7 +286,7 @@ Project.create(
     description: "In Pandemic, several virulent diseases have broken out simultaneously all over the world! The players are disease-fighting specialists whose mission is to treat disease hotspots while researching cures for each of four plagues before they get out of hand.
 The game board depicts several major population centers on Earth. On each turn, a player can use up to four actions to travel between cities, treat infected populaces, discover a cure, or build a research station. A deck of cards provides the players with these abilities, but sprinkled throughout this deck are Epidemic! cards that accelerate and intensify the diseases' activity. A second, separate deck of cards controls the normal spread of the infections.
 Taking a unique role within the team, players must plan their strategy to mesh with their specialists' strengths in order to conquer the diseases. For example, the Operations Expert can build research stations which are needed to find cures for the diseases and which allow for greater mobility between cities; the Scientist needs only four cards of a particular disease to cure it instead of the normal five—but the diseases are spreading quickly and time is running out. If one or more diseases spreads beyond recovery or if too much time elapses, the players all lose. If they cure the four diseases, they all win!",
-    creater_id: 5,
+    creater_id: 13,
     end_date: "2016-11-15",
     photo_url: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQRGCnnmkM3MJMO5rG7rJ2oFSktx3yMYMSUss8kUyomKaSI6aCv1Q",
 
@@ -532,7 +532,7 @@ Sensors: NFC, gyroscope, accelerometer, geo-magnetic sensor
 Audio: Stereo speakers and microphone
 Other Features: Volume slider, game controls, IR sensor strip, headphone socket, stylus, rumble support, external expansion port
 Our 32GB Premium Pack provides us with a Wii U console and GamePad in glossy black. The console itself is longer, a touch taller and more rounded at the edges than its predecessor, but still a small, compact, nicely designed little unit. Even compared to the new PlayStation 3 , Wii U feels diminutive in comparison and rather smart-looking. However, plastics on the main unit are hardly of a premium quality, attracting fingerprints and marking easily, and within two days of general us",
-    creater_id: 7,
+    creater_id: 13,
     end_date: "2016-11-25",
     photo_url: "http://images.eurogamer.net/2012/articles//a/1/5/2/9/1/8/1/1080p1.png",
     goal: 2500,

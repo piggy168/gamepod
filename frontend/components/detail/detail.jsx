@@ -33,6 +33,12 @@ class Detail extends React.Component{
     this.props.requestDetail(this.props.params.projectId);
   }
 
+  componentWillReceiveProps(nextProps){
+   if (this.props.params.projectId !== nextProps.params.projectId){
+     this.props.requestDetail(nextProps.params.projectId);
+   }
+ }
+
   openModal(index){
     this.setState({modal: true, clickOnReward: index});
   }

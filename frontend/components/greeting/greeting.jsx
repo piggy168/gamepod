@@ -78,6 +78,10 @@ class Greeting extends React.Component{
     hashHistory.push(`/search`);
   }
 
+  profile(){
+    hashHistory.push(`/user/${this.props.currentUser.id}`);
+  }
+
   sessionLinks(){ return(
     <nav className="login-signup">
       <div method="get" id="search">
@@ -104,7 +108,7 @@ class Greeting extends React.Component{
       <button className="start" onClick={this.startProject.bind(this)}> Start a project</button>
 
       <button className="header-button" onClick={this.out.bind(this)}>Log Out</button>
-        <img className='imglog' src={currentUser.photo_url} onClick={()=>hashHistory.push(`/user/${currentUser.id}`)}/>
+        <img className='imglog' src={currentUser.photo_url} onClick={this.profile.bind(this)}/>
       <div className="userinfo">
     		<h2 className="header-name">{currentUser.username}</h2>
         <h3 className="header-favorites">

@@ -38,6 +38,13 @@ class Profile extends React.Component{
     this.props.requestProfile(this.props.params.id);
   }
 
+  componentWillReceiveProps(nextProps){
+    if (this.props.params.id !== nextProps.params.id){
+      this.props.requestProfile(nextProps.params.id);
+    }
+  }
+
+
   showDetail(id){
     hashHistory.push(`/projects/${id}`);
   }
@@ -77,11 +84,10 @@ class Profile extends React.Component{
   }
 
   render(){
-    if (this.update === false){
       if (this.props.profile.bio !== undefined){
     this.state.photo_url=this.props.profile.photo_url;
     this.state.bio=this.props.profile.bio;
-    this.update = true;}}
+    this.update = true;}
 
     let control;
     if ((this.props.currentUser) && (this.props.currentUser.id === this.props.profile.id)){
