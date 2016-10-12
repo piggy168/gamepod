@@ -41,6 +41,11 @@ class Profile extends React.Component{
   componentWillReceiveProps(nextProps){
     if (this.props.params.id !== nextProps.params.id){
       this.props.requestProfile(nextProps.params.id);
+    } else {
+      this.setState({
+        photo_url: nextProps.profile.photo_url,
+        bio: nextProps.profile.bio
+      });
     }
   }
 
@@ -84,10 +89,6 @@ class Profile extends React.Component{
   }
 
   render(){
-      if (this.props.profile.bio !== undefined){
-    this.state.photo_url=this.props.profile.photo_url;
-    this.state.bio=this.props.profile.bio;
-    this.update = true;}
 
     let control;
     if ((this.props.currentUser) && (this.props.currentUser.id === this.props.profile.id)){
